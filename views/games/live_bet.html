@@ -1,0 +1,169 @@
+
+                <sport-livenow class="ng-scope ng-isolate-scope">
+                    <section class="odds-lists livenow">
+                        <div class="search-group category flex-box bottom10">
+                            <div class="search-group-item">
+                                <sport-search categories="searchResults" odds="oddsResults" focused="focused" class="-full ng-isolate-scope">
+                                    <div class="search search-sport" ng-class="{'open': vm.openSearch}">
+                                        <div class="search-container" ng-click="vm.openSearch = true; vm.focused = true;">
+                                            <div class="search-module" outside-click="vm.openSearch = false; vm.allMatches = ''; vm.showResults = false; vm.query = ''" is-active="vm.openSearch">
+                                                <div class="search-input">
+                                                    <div class="form-group">
+                                                        <input class="form-control ng-pristine ng-untouched ng-valid ng-scope ng-empty" ng-model="vm.query" ng-attr-placeholder="{{:: 'Search for a game, match or event' | t : 'ui.sportsbook' }}" value="" data-toggle="tooltip" ng-change="vm.queryChange()" ng-focus="vm.changeFocusState()" ng-model-options="{debounce: 200}" ng-if="$root.isDesktop" placeholder="Search..." data-original-title="" title="">
+                                                        <i class="icon-search ng-scope" ng-if="vm.query === null || vm.query === undefined || vm.query === ''"></i>
+                                                        <div class="loader ng-hide" ng-show="vm.updatePending">
+                                                            <svg class="circular" viewBox="25 25 50 50">
+                                                                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="4" stroke-miterlimit="10"></circle>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </sport-search>
+                            </div>
+                            <div class="search-group-item">
+                                <button class="leaderboard-btn" ng-click="$root.toogleStatsFeed = !$root.toogleStatsFeed; $root.toggleBetsFeed = false;" ng-class="{'active': $root.toogleStatsFeed}">
+                                    <span class="ng-binding">Winners</span>
+                                    <img ng-class="$root.toogleStatsFeed ? 'winners-ico-active' : 'winners-ico'" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD0AAAAvAQMAAABqslA6AAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAA5JREFUeNpjYBgFQwAAAAGnAAEAya95AAAAAElFTkSuQmCC" class="winners-ico">
+                                </button>
+                                <button class="bets-feed-btn" ng-class="{'active' : $root.toggleBetsFeed}" ng-click="$root.toggleBetsFeed = !$root.toggleBetsFeed; $root.toogleStatsFeed = false">
+                                    <span class="pulse-button"></span>
+                                    <span class="ng-binding">Incoming bets </span>
+                                    <img ng-class="$root.toggleBetsFeed ? 'betsfeed-ico-active' : 'betsfeed-ico'" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuAQMAAABtd7l0AAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAA1JREFUeNpjYBgFlAEAAUIAAT/cqQ0AAAAASUVORK5CYII=" class="betsfeed-ico">
+                                </button>
+                            </div>
+                        </div>
+                        <sport-matchoftheday class="ng-isolate-scope">
+                        </sport-matchoftheday>
+                        <section ng-repeat="sportId in vm.categoryIds" ng-if="sportId !== 46801" class="ng-scope">
+                            <header class="clearfix">
+                                <h1><span class="ng-binding">eSports</span>
+
+                </h1>
+                                <div class="promoted-markets-container animated fadeIn">
+                                    <div class="promoted-market ng-scope" ng-repeat="topMarket in ::vm.topMarketTypes[sportId] track by topMarket.id">
+                                        <div class="market-header ng-binding ng-scope" ng-if="!$root.isMobile">
+                                            Match Result (2 way)
+                                        </div>
+                                        <div class="market-outcome">
+                                            <div class="odds-item ng-binding ng-scope" ng-repeat="outcome in (topMarket.result_keys_filtered || topMarket.result_keys)" ng-if="(topMarket.result_keys_filtered || topMarket.result_keys).length < 4">
+                                                1
+                                            </div>
+                                            <div class="odds-item ng-binding ng-scope" ng-repeat="outcome in (topMarket.result_keys_filtered || topMarket.result_keys)" ng-if="(topMarket.result_keys_filtered || topMarket.result_keys).length < 4">
+                                                2
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="promoted-market ng-scope" ng-repeat="topMarket in ::vm.topMarketTypes[sportId] track by topMarket.id">
+                                        <div class="market-header ng-binding ng-scope" ng-if="!$root.isMobile">
+                                            Match Up Handicap
+                                        </div>
+                                        <div class="market-outcome">
+                                            <div class="odds-item ng-binding ng-scope" ng-if="topMarket.view_type === 'line'">
+                                                Hcp
+                                            </div>
+                                            <div class="odds-item ng-binding ng-scope" ng-repeat="outcome in (topMarket.result_keys_filtered || topMarket.result_keys)" ng-if="(topMarket.result_keys_filtered || topMarket.result_keys).length < 4">
+                                                1
+                                            </div>
+                                            <div class="odds-item ng-binding ng-scope" ng-repeat="outcome in (topMarket.result_keys_filtered || topMarket.result_keys)" ng-if="(topMarket.result_keys_filtered || topMarket.result_keys).length < 4">
+                                                2
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="promoted-market ng-scope" ng-repeat="topMarket in ::vm.topMarketTypes[sportId] track by topMarket.id">
+                                        <div class="market-header ng-binding ng-scope" ng-if="!$root.isMobile">
+                                            Total Maps Played Over/Under
+                                        </div>
+                                        <div class="market-outcome">
+                                            <div class="odds-item ng-binding ng-scope" ng-if="topMarket.view_type === 'line'">
+                                                Line
+                                            </div>
+                                            <div class="odds-item ng-binding ng-scope" ng-repeat="outcome in (topMarket.result_keys_filtered || topMarket.result_keys)" ng-if="(topMarket.result_keys_filtered || topMarket.result_keys).length < 4">
+                                                Over
+                                            </div>
+                                            <div class="odds-item ng-binding ng-scope" ng-repeat="outcome in (topMarket.result_keys_filtered || topMarket.result_keys)" ng-if="(topMarket.result_keys_filtered || topMarket.result_keys).length < 4">
+                                                Under
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </header>
+                            <sport-matchlist model="vm.matchesGroupedByCategory[sportId]" scroll-load-more="vm.scrollLoadMore()" top-market-types="vm.topMarketTypes[sportId]" category-ids="vm.categoryIds" is-last-category="vm.isLastCategory" view="live-match" class="ng-isolate-scope">
+                                <article class="match animated fadeIn ng-scope" ng-repeat="match in vm.model track by match.id" ng-class="{'more-odds': vm.index==$index, 'freebet': vm.BonusFreeBetService.isFreeBetMatch(match)}" in-view="vm.loadMore($last, $inview, match, match.sport_category)">
+                                    <div class="match-time">
+                                        <sport-tree-live-timer-state match="match" class="ng-isolate-scope">
+                                            <sport-tree-live-betgenius-state match="vm.match" ng-if="vm.match &amp;&amp; !vm.match.livebet_our" class="ng-scope ng-isolate-scope">
+                                                <div class="timer">
+                                                    <div class="minutes ng-binding">Cache (Bo1)</div>
+                                                </div>
+                                                <div class="phase ng-binding"></div>
+                                            </sport-tree-live-betgenius-state>
+                                        </sport-tree-live-timer-state>
+                                        <div class="match-score ng-scope" ng-if="$root.fixtureInplayData[match.fixture_id].scores.home !== undefined &amp;&amp; !(match.sport_category === 72 || $root.fixtureInplayData[match.fixture_id].scoreboard.totalScores || match.sport_category === 92)">
+                                            <span class="ng-binding">0</span> -
+                                            <span class="ng-binding">0</span>
+                                        </div>
+                                    </div>
+                                    <section>
+                                        <header>
+                                            <div class="match-info">
+                                                <div class="match-name">
+                                                    <a ui-sref="root.sportsbook.live.match({ locale: $root.locale, matchId: match.id })" href="/en/livebet/488604">
+                                                        <h2 ng-if="::match.home_team_obj &amp;&amp; match.away_team_obj" class="ng-scope">
+                <span class="ng-binding">Canada</span> <span class="devider">-</span> <span class="ng-binding">Alpha Red</span>
+                </h2>
+                                                        <h3 class="ng-binding">[CSGO] World Electronic Sports Games</h3>
+                                                        <div class="external-comment ng-binding">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="match-stats">
+                                                </div>
+                                            </div>
+                                        </header>
+                                        <div class="match-odds">
+                                            <div class="match-odds-wrap">
+                                                <div sly-repeat="topMarketType in vm.topMarketTypes" class="market-type ng-scope">
+                                                    <sport-matchlist-promoted-markets markets="match.promotedMarkets" market-type="topMarketType" match="match" class="ng-isolate-scope">
+                                                        <div sly-repeat="market in vm.markets" viewport-watch="" ng-if="vm.marketType.id === market.market_type_id" style="position:relative" ng-class="{'freebet-markets': vm.BonusFreeBetService.isMarketOnlyFreeBet(market)}" class="cell-2">
+                                                            <div class="odds-item flash- suspended" ng-class="{'active': $root.selectedMarkets[market.id].outcomes[outcome.id].selected,
+                'exceeded': outcome.exceeded,
+                'suspended': vm.isOddsSuspended(outcome)}" toggle-select="" viewport-watch="" ng-repeat="outcome in (market.outcomesFiltered || market.outcomes) track by outcome.id" ng-click="vm.selectOdds(market, outcome.id, vm.match.name, vm.match.status, vm.marketType, vm.match.livebet_our)">
+                                                                1.22
+                                                            </div>
+                                                            <div class="odds-item flash- suspended" ng-class="{'active': $root.selectedMarkets[market.id].outcomes[outcome.id].selected,
+                'exceeded': outcome.exceeded,
+                'suspended': vm.isOddsSuspended(outcome)}" toggle-select="" viewport-watch="" ng-repeat="outcome in (market.outcomesFiltered || market.outcomes) track by outcome.id" ng-click="vm.selectOdds(market, outcome.id, vm.match.name, vm.match.status, vm.marketType, vm.match.livebet_our)">
+                                                                4.00
+                                                            </div>
+                                                            <div class="special-icons" style="margin-top: -30px">
+                                                                <i class="freebet-ico freebet-ico-2">free bet</i>
+                                                            </div>
+                                                        </div>
+                                                    </sport-matchlist-promoted-markets>
+                                                </div>
+                                                <div sly-repeat="topMarketType in vm.topMarketTypes" class="market-type ng-scope">
+                                                    <sport-matchlist-promoted-markets markets="match.promotedMarkets" market-type="topMarketType" match="match" class="ng-isolate-scope">
+                                                    </sport-matchlist-promoted-markets>
+                                                </div>
+                                                <div sly-repeat="topMarketType in vm.topMarketTypes" class="market-type ng-scope">
+                                                    <sport-matchlist-promoted-markets markets="match.promotedMarkets" market-type="topMarketType" match="match" class="ng-isolate-scope">
+                                                    </sport-matchlist-promoted-markets>
+                                                </div>
+                                                <a class="link more-odds ng-binding ng-scope" ng-if="match.sideBetOtherMarkets" ng-click="vm.moreOdds($index, match); vm.scrollIntoView($event); match.showBetsStat = false; match.showSideBets = true">
+
+                +1
+                </a>
+                                            </div>
+                                            <span class="special-icons">
+                <i class="freebet-ico ng-binding">Free bet</i>
+                </span>
+                                        </div>
+                                    </section>
+                                </article>
+                            </sport-matchlist>
+                        </section>
+                    </section>
+                </sport-livenow>

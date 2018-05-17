@@ -1,0 +1,59 @@
+<div class="hockey_wrap">
+	<div class="etc_left_45"> 
+		<a href="#" class="live_sport_b" ng-click="goLiveMatch(lm[0].l,lm[0].c)"> ◀ </a>  
+		 <div class="etc_left_in_hockey">
+			 <p>{{ (LS|filter:{MId:tabMId})[0].CN }}</p>
+			 <p ng-if="liveTop[0].Period == '0'">경기 준비중</p>
+			 <p ng-if="liveTop[0].Period != '0'">{{ liveTop[0].Period }} 피리어드</p>
+			 <p ng-show="liveTop[0].Side == '0'"><span class="etc_time">{{ (liveS|where:{EventTypeId:liveTop[0].EventTypeId})[0].KName }} </span></p>
+			 <p ng-show="liveTop[0].Side == '1'">{{ht}} <span class="etc_time">{{ (liveS|where:{EventTypeId:liveTop[0].EventTypeId})[0].KName }} </span></p>
+			 <p ng-show="liveTop[0].Side == '2'">{{at}} <span class="etc_time">{{ (liveS|where:{EventTypeId:liveTop[0].EventTypeId})[0].KName }} </span></p>				 
+			 <p ng-show="liveTop[0].RemainingTime.length>1">남은시간 <span class="etc_time">{{liveTop[0].RemainingTime}} </span></p>
+			 <p ng-show="liveTop[0].IsTimeout"><span class="etc_time">타임아웃 </span></span>				 
+		</div>			
+	</div>
+	<div class="etc_right_50">
+		<ul class="etc_score_list">
+			<li>
+				<div class="etc_score_team_t"></div>
+				<div class="etc_score_team_c">{{ht}}</div>
+				<div class="etc_score_team_b">{{at}}</div>
+			</li>
+			<li>
+				<div class="etc_score_t">점수</div>
+				<div class="etc_score_c_2">{{ liveTop[0].Score.split(':')[0] }}</div>
+				<div class="etc_score_b_2">{{ liveTop[0].Score.split(':')[1] }}</div>
+			</li>
+			<li ng-show="liveTop[0].Period>0">
+				<div class="etc_score_t">1피리어드</div>
+				<div class="etc_score_c_4">{{ liveTop[0].Set1Score.split(':')[0] }}</div>
+				<div class="etc_score_b_4">{{ liveTop[0].Set1Score.split(':')[1] }}</div>
+			</li>						 
+			<li ng-show="liveTop[0].Period>1">
+				<div class="etc_score_t">2피리어드</div>
+				<div class="etc_score_c_4">{{ liveTop[0].Set2Score.split(':')[0] }}</div>
+				<div class="etc_score_b_4">{{ liveTop[0].Set2Score.split(':')[1] }}</div>
+			</li>				
+			<li ng-show="liveTop[0].Period>2">
+				<div class="etc_score_t">3피리어드</div>
+				<div class="etc_score_c_4">{{ liveTop[0].Set3Score.split(':')[0] }}</div>
+				<div class="etc_score_b_4">{{ liveTop[0].Set3Score.split(':')[1] }}</div>
+			</li>
+			<li ng-show="liveTop[0].Period>3">
+				<div class="etc_score_t">4피리어드</div>
+				<div class="etc_score_c_4">{{ liveTop[0].Set4Score.split(':')[0] }}</div>
+				<div class="etc_score_b_4">{{ liveTop[0].Set4Score.split(':')[1] }}</div>
+			</li>
+			<li ng-show="liveTop[0].Period>4">
+				<div class="etc_score_t">5피리어드</div>
+				<div class="etc_score_c_4">{{ liveTop[0].Set5Score.split(':')[0] }}</div>
+				<div class="etc_score_b_4">{{ liveTop[0].Set5Score.split(':')[1] }}</div>
+			</li>
+			<li ng-show="liveTop[0].Period>5">
+				<div class="etc_score_t">6피리어드</div>
+				<div class="etc_score_c_4">{{ liveTop[0].Set6Score.split(':')[0] }}</div>
+				<div class="etc_score_b_4">{{ liveTop[0].Set6Score.split(':')[1] }}</div>
+			</li>
+		</ul>
+	</div>
+</div>

@@ -1,0 +1,20 @@
+<div role="tabpanel" class="tab-pane active ng-scope" id="betslip">
+    <p  class="clear-selections ng-binding ng-scope" ng-click="clearSelections()">
+        Clear selections
+    </p>
+    <div ng-repeat="(index,item) in bets" class="ng-scope has-warning">
+        <div class="odds animated flipInX">
+            <span class="ns-close ng-scope" ng-click="removeMarket(item.id)"></span>
+            <div class="odds-title ng-binding">
+                {{ item.team1 }}    
+                <span class="odds-type ng-binding">
+                {{ item.team2 }}
+                </span>
+            </div>
+            <betslip-outcomes market="selectedMarket" class="ng-isolate-scope">
+                
+            </betslip-outcomes>
+        </div>
+    </div>
+
+</div> 

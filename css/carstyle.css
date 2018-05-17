@@ -1,0 +1,108 @@
+
+/* shared hosting - features */
+.sharedfeatures-odd2 
+ {
+    padding:50px 0; 
+    overflow:hidden; 
+    background:#fff;
+ }
+.sharedfeatures-odd2 .circle 
+ {
+    border-radius: 50%; 
+    overflow:hidden; 
+    width: 200px; 
+    height: 200px; 
+    background:#37485c; 
+    padding-top:50px; 
+    margin:0 auto; 
+    position:relative; 
+    z-index:99999; 
+    text-align: center; 
+     margin-top:50px;
+ }
+ .sharedfeatures-odd3 .circle 
+ {
+    border-radius: 50%; 
+    overflow:hidden; 
+    width: 200px; 
+    height: 200px; 
+    background:#37485c; 
+    padding-top:50px; 
+    margin:0 auto; 
+    position:relative; 
+    z-index:99999; 
+    text-align: center; 
+    margin-top:40px; 
+ }
+.sharedfeatures-even2 
+ {
+    padding:50px 0; 
+    overflow:hidden; 
+    background-color:#f8f8f8;
+ }
+.sharedfeatures-even i 
+ {
+    color:#DBDBDB; 
+    font-size:100px; 
+ }
+.sharedfeatures-even2 .circle 
+ {
+    border-radius: 50%; 
+    overflow:hidden; 
+    width: 200px;    
+    height: 200px; 
+    background:#B86662; 
+    padding-top:50px; 
+    margin:0 auto; 
+    position:relative; 
+    z-index:99999; 
+    text-align: center;
+    margin-top:220px; 
+  }
+  .fadeInUpCareer
+  {
+    background-color:#fff;
+    -webkit-animation-name:fadeInUp;
+    animation-name: fadeInUp;
+  }
+
+.row2
+  {
+    height:380px;
+
+  }
+
+.row2 h2
+  {
+   margin-top: 50px;
+  }
+
+.carimage1
+  {
+
+    margin-top:50px;
+    margin-left:-120px;
+  }
+
+.carimage2
+  {
+
+    margin-top:95px;
+    margin-left:40px;
+  }
+
+.carimage3
+  {
+
+    margin-top:15px;
+    margin-left:-34%;
+  }
+
+.carimage4
+    {
+      margin-right:200px;
+    }
+
+
+
+/*end of features*/

@@ -1,0 +1,36 @@
+<div class="odds-body cell-3">
+    
+    <div class="odds-item active flash-up" >
+        <span class="click-area" ></span>
+        <div class="odds-item-title ng-binding">
+            {{item.team1}}
+        </div>
+        <div class="odds-item-odd odds-sub-item link ng-binding">
+            <i class="glyphicon glyphicon-chevron-down" ng-class="{'visible':outcome.odd.betslipFlash === 'down'}"></i>
+            <i class="glyphicon glyphicon-chevron-up visible" ng-class="{'visible':outcome.odd.betslipFlash === 'up'}"></i> 6.00
+        </div>
+    </div>
+
+    <div  class="odds-item flash-down" ng-class="active">
+        <span class="click-area" ng-click="vm.BetslipService.updateOdds(vm.market, outcome.id)"></span>
+        <div class="odds-item-title ng-binding">
+            Draw
+        </div>
+        <div class="odds-item-odd odds-sub-item link ng-binding">
+            <i class="glyphicon glyphicon-chevron-down visible" ng-class="{'visible':outcome.odd.betslipFlash === 'down'}"></i>
+            <i class="glyphicon glyphicon-chevron-up" ng-class="{'visible':outcome.odd.betslipFlash === 'up'}"></i> 3.60
+        </div>
+    </div>
+                
+    <div  class="odds-item flash-down" ng-class="active">
+        <span class="click-area" ></span>
+        <div class="odds-item-title ng-binding">
+            {{item.team2}}
+        </div>
+        <div class="odds-item-odd odds-sub-item link ng-binding">
+            <i class="glyphicon glyphicon-chevron-down visible" ng-class="{'visible':outcome.odd.betslipFlash === 'down'}"></i>
+            <i class="glyphicon glyphicon-chevron-up" ng-class="{'visible':outcome.odd.betslipFlash === 'up'}"></i> 1.50
+        </div>
+    </div>
+                <!-- end ngRepeat: (outcomeId, outcome) in vm.market.outcomes -->
+</div>

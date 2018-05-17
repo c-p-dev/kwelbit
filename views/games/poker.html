@@ -1,0 +1,1432 @@
+<div ui-view="">
+    <poker class="ng-scope ng-isolate-scope">
+        <article class="poker-page">
+            <header class="poker-header">
+                <div class="poker-title">
+                    <h2>Coolbet</h2>
+                    <h1 class="ng-binding">Poker <em>club</em></h1>
+                </div>
+                <div class="poker-buttons flex-auto">
+                    <poker-download class="ng-isolate-scope">
+                        <a target="_self" href="http://d21b194218e86d445182-cf9311cbed7f6446fca175164d0a5279.r65.cf5.rackcdn.com/client/prod/coolbet.exe" class="ng-scope">
+                            <button class="button -pri-green download-client-button">
+                                <span class="ng-binding">Download</span>
+                                <span class="ng-binding">Poker client</span>
+                            </button>
+                        </a>
+                    </poker-download>
+                    <poker-instant-play class="ng-isolate-scope">
+                        <div class="button instant-play-button">
+                            <!-- language menu here -->
+                            <span>Instant Play</span>
+                        </div>
+                    </poker-instant-play>
+                </div>
+            </header>
+            <div class="poker-content flex-box flex-start">
+                <section class="poker-offers">
+                    <poker-offers-welcome class="ng-isolate-scope">
+                        <a href="/">
+                            <snippet key="'poker.welcome-offer'" class="ng-isolate-scope">
+                                <div class="snippet ng-binding" ng-bind-html="vm.content">
+                                    <a href="https://www.coolbet.com/en/poker-welcome-bonus">
+                                        <div class="flex-box flex-start">
+                                            <div class="welcome-offer">
+                                                <p>Welcome package</p>
+                                                <div class="flex-auto">
+                                                    <span class="sum">
+                                                        2000
+                                                    </span>
+                                                    <span>
+                                                        <p>EUR</p>
+                                                        <em>In bonus</em>
+                                                    </span>
+                                                </div>
+                                                <span class="plus-offer"></span>
+                                            </div>
+                                            <div class="welcome-offer -blue-offer">
+                                                <p>Welcome package</p>
+                                                <div class="flex-auto">
+                                                    <span class="sum">6000
+                                                    </span>
+                                                    <span>
+                                                        <p>EUR</p>
+                                                        <em>In freerolls</em>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </snippet>
+                        </a>
+                    </poker-offers-welcome>
+                    <snippet key="'poker.cashback'" class="ng-isolate-scope">
+                        <div class="snippet ng-binding" ng-bind-html="vm.content"><a href="/">
+            </a><a href="https://www.coolbet.com/en/cash-back"><img src="https://coolbet-cms.imgix.net/blog/cashback-en_1515685557423.png" class="top20"></a>
+                        </div>
+                    </snippet>
+                    <poker-promotions class="ng-isolate-scope">
+                        <div class="promo-module top20">
+                            <div ng-style="{'width': vm.sliderWrap}" style="width: 1890px;">
+                                <div class="promo-item ng-scope" ng-repeat="promo in vm.promotions | orderBy:'display.order' ">
+                                    <a href="/en/coolbet-open">
+                        <img class="imgix-fluid" ng-src="https://coolbet-cms.imgix.net/promotions/POKER_LIVE_TOURNAMENT_COOLBET_OPEN_EN_1517425869126.png?w=400&amp;h=400&amp;fit=crop&amp;crop=entropy" src="https://coolbet-cms.imgix.net/promotions/POKER_LIVE_TOURNAMENT_COOLBET_OPEN_EN_1517425869126.png?w=400&amp;h=400&amp;fit=crop&amp;crop=entropy">
+                    </a>
+                                </div>
+                                <div class="promo-item ng-scope" ng-repeat="promo in vm.promotions | orderBy:'display.order' ">
+                                    <a href="/en/poker-welcome-bonus">
+                        <img class="imgix-fluid" ng-src="https://coolbet-cms.imgix.net/promotions/Poker-FDB (1)_1516870957419.png?w=400&amp;h=400&amp;fit=crop&amp;crop=entropy" src="https://coolbet-cms.imgix.net/promotions/Poker-FDB (1)_1516870957419.png?w=400&amp;h=400&amp;fit=crop&amp;crop=entropy">
+                    </a>
+                                </div>
+                                <div class="promo-item ng-scope" ng-repeat="promo in vm.promotions | orderBy:'display.order' ">
+                                    <a href="/en/fish-party">
+                        <img class="imgix-fluid" ng-src="https://coolbet-cms.imgix.net/promotions/Fish-party-poker-int_1516871538727.png?w=400&amp;h=400&amp;fit=crop&amp;crop=entropy" src="https://coolbet-cms.imgix.net/promotions/Fish-party-poker-int_1516871538727.png?w=400&amp;h=400&amp;fit=crop&amp;crop=entropy">
+                    </a>
+                                </div>
+                                <div class="promo-item ng-scope" ng-repeat="promo in vm.promotions | orderBy:'display.order' ">
+                                    <a href="/en/cash-back">
+                        <img class="imgix-fluid" ng-src="https://coolbet-cms.imgix.net/promotions/POKER_CAHBACK_INB_EN_1516870346679.png?w=400&amp;h=400&amp;fit=crop&amp;crop=entropy" src="https://coolbet-cms.imgix.net/promotions/POKER_CAHBACK_INB_EN_1516870346679.png?w=400&amp;h=400&amp;fit=crop&amp;crop=entropy">
+                    </a>
+                                </div>
+                                <div class="promo-item ng-scope" ng-repeat="promo in vm.promotions | orderBy:'display.order' ">
+                                    <a href="/en/freerolls">
+                        <img class="imgix-fluid" ng-src="https://coolbet-cms.imgix.net/promotions/Poker-FreeRolls_1516871966151.png?w=400&amp;h=400&amp;fit=crop&amp;crop=entropy" src="https://coolbet-cms.imgix.net/promotions/Poker-FreeRolls_1516871966151.png?w=400&amp;h=400&amp;fit=crop&amp;crop=entropy">
+                    </a>
+                                </div>
+                                <div class="promo-item ng-scope" ng-repeat="promo in vm.promotions | orderBy:'display.order' ">
+                                    <a href="/en/mission-freerolls">
+                        <img class="imgix-fluid" ng-src="https://coolbet-cms.imgix.net/promotions/mission-freerolls-internal-EN_1520350293608.png?w=400&amp;h=400&amp;fit=crop&amp;crop=entropy" src="https://coolbet-cms.imgix.net/promotions/mission-freerolls-internal-EN_1520350293608.png?w=400&amp;h=400&amp;fit=crop&amp;crop=entropy">
+                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="promo-slider-controls">
+                            <button class="slider-right" ng-hide="vm.currentSlide >= vm.sliderEnds" ng-click="vm.moveSlide('right')"><i class="icon-arrow-circle-right"></i></button>
+                            <button class="slider-left ng-hide" ng-show="vm.currentSlide > 0;" ng-click="vm.moveSlide('left')"><i class="icon-arrow-circle-left"></i></button>
+                        </div>
+                    </poker-promotions>
+                </section>
+                <section class="top20">
+                    <poker-stats class="ng-isolate-scope">
+                        <div class="poker-stats flex-box ng-scope" ng-if="vm.PokerService.pokerPlayerStats || vm.PokerService.badBeatAmount">
+                            <div class="poker-stats-box">
+                                <span class="number ng-binding">682<span class="ng-binding">Now</span></span>
+                                <span class="caption ng-binding" ng-bind-html="'ui.poker.active-players' | t">Players <br>online</span>
+                            </div>
+                            <div class="poker-stats-box">
+                                <a href="https://www.coolbet.com/en/bad-beat-jackpot">
+                <span class="number ng-binding">24,196.90<span>eur</span></span>
+                <span class="caption ng-binding" ng-bind-html="'ui.poker.bad-beat-jackpot' | t">Bad Beat  <br>Jackpot</span>
+            </a>
+                            </div>
+                        </div>
+                    </poker-stats>
+                    <div class="flex-box flex-start top20">
+                        <poker-tournaments class="ng-isolate-scope">
+                            <div class="poker-tournaments card">
+                                <div class="flex-box">
+                                    <button class="button ng-binding -pri-orange" ng-click="vm.select('TOURNAMENT')" ng-class="vm.listName ==='TOURNAMENT' ? '-pri-orange' : '-button-black'">Tournaments</button>
+                                    <button class="button ng-binding -button-black" ng-click="vm.select('SATELLITES')" ng-class="vm.listName ==='SATELLITES' ? '-pri-orange' : '-button-black'">Satellites</button>
+                                    <button class="button ng-binding -button-black" ng-click="vm.select('FREEROLLS')" ng-class="vm.listName ==='FREEROLLS' ? '-pri-orange' : '-button-black'">Freeroll</button>
+                                </div>
+                                <div class="tournaments-list">
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">13 Mar 13:30</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€100 6 Max Turbo Freezeout <span class="event-id ng-binding">(30840730)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>11<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">13 Mar 14:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€150 The Joy of Six Max <span class="event-id ng-binding">(30840820)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>11<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">13 Mar 14:15</div>
+                                        <div class="name">
+                                            <span class="ng-binding">Super Turbo Freezeout <span class="event-id ng-binding">(30840879)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>0.55<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">13 Mar 14:30</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€25 Turbo Freezeout <span class="event-id ng-binding">(30840942)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>1.1<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">13 Mar 14:45</div>
+                                        <div class="name">
+                                            <span class="ng-binding">Turbo Super Bounty Rebuy <span class="event-id ng-binding">(30841031)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>2.2<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">13 Mar 15:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€300 Lucky Koi <span class="event-id ng-binding">(30841141)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>5.5<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">13 Mar 15:30</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€100 Freezeout <span class="event-id ng-binding">(30841386)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>11<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">13 Mar 15:45</div>
+                                        <div class="name">
+                                            <span class="ng-binding">6-Max Turbo Freezeout <span class="event-id ng-binding">(30841509)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>0.55<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">13 Mar 16:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€350 Dragon Dance <span class="event-id ng-binding">(30841639)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>11<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">13 Mar 16:15</div>
+                                        <div class="name">
+                                            <span class="ng-binding">Turbo Freezeout <span class="event-id ng-binding">(30841759)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>2.2<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">13 Mar 16:30</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€100 Morning Rebuy <span class="event-id ng-binding">(30841906)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>1.1<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">13 Mar 16:45</div>
+                                        <div class="name">
+                                            <span class="ng-binding">Super Turbo Freezeout <span class="event-id ng-binding">(30842055)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>3.3<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">13 Mar 17:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€300 Morning Freeze <span class="event-id ng-binding">(30842217)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>22<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">13 Mar 17:10</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€100 Big Ante Rebuy <span class="event-id ng-binding">(30842335)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>2.2<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">13 Mar 17:20</div>
+                                        <div class="name">
+                                            <span class="ng-binding">6-Max Bounty <span class="event-id ng-binding">(30842440)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>0.55<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">13 Mar 17:30</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€200 Freezeout <span class="event-id ng-binding">(30845735)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>5.5<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">13 Mar 17:40</div>
+                                        <div class="name">
+                                            <span class="ng-binding">Turbo Super Bounty Rebuy <span class="event-id ng-binding">(30842682)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>2.2<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">13 Mar 17:50</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€200 6 Max Turbo Freezeout <span class="event-id ng-binding">(30842811)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>11<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">13 Mar 18:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€750 Bust The Bank <span class="event-id ng-binding">(30842932)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>22<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">13 Mar 18:20</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€200 Big Ante Freezeout <span class="event-id ng-binding">(30843173)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>11<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">13 Mar 18:30</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€100 Deepstack Freezeout <span class="event-id ng-binding">(30843298)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>5.5<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">13 Mar 18:40</div>
+                                        <div class="name">
+                                            <span class="ng-binding">Bounty <span class="event-id ng-binding">(30843430)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>3.3<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">13 Mar 18:50</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€100 6 Max Turbo Rebuy <span class="event-id ng-binding">(30843551)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>1.1<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">13 Mar 19:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€250 Lucky Leprechaun <span class="event-id ng-binding">(30843707)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>11<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">13 Mar 19:20</div>
+                                        <div class="name">
+                                            <span class="ng-binding">Super Turbo Freezeout <span class="event-id ng-binding">(30844008)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>0.55<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">13 Mar 19:30</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€50 6-Max Deepstack Freezeout <span class="event-id ng-binding">(30844160)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>3.3<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">13 Mar 19:40</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€200 Turbo Freezeout <span class="event-id ng-binding">(30844310)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>11<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">13 Mar 19:50</div>
+                                        <div class="name">
+                                            <span class="ng-binding">Burst Freezeout <span class="event-id ng-binding">(30844461)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>1.1<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">13 Mar 20:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€300 Cashapillar <span class="event-id ng-binding">(30844628)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>22<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">13 Mar 20:10</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€150 Freezeout <span class="event-id ng-binding">(30844784)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>5.5<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">13 Mar 20:20</div>
+                                        <div class="name">
+                                            <span class="ng-binding">Turbo Rebuy <span class="event-id ng-binding">(30844927)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>0.55<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">13 Mar 20:30</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€50 Turbo Freezeout <span class="event-id ng-binding">(30845111)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>1.1<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">13 Mar 20:50</div>
+                                        <div class="name">
+                                            <span class="ng-binding">99 Cent Nonsense <span class="event-id ng-binding">(30845446)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>0.99<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">13 Mar 21:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€1,000 Break Away <span class="event-id ng-binding">(30845606)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>11<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">13 Mar 21:30</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€200 Lunchtime Special <span class="event-id ng-binding">(30846073)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>11<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">13 Mar 21:50</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€100 Early Bird Freezeout <span class="event-id ng-binding">(30846412)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>3.3<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">13 Mar 22:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€1,000 Break Da Bank <span class="event-id ng-binding">(30846589)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>22<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">13 Mar 22:10</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€200 Deepstack Freezeout <span class="event-id ng-binding">(30846754)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>11<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">13 Mar 22:30</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€500 Turbo Rebuy <span class="event-id ng-binding">(30847105)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>5.5<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">13 Mar 22:50</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€50 Big Ante Freezeout <span class="event-id ng-binding">(30847447)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>2.2<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">13 Mar 23:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€1,000 Good To Go <span class="event-id ng-binding">(30847636)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>11<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">13 Mar 23:10</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€300 6-Max Rebuy <span class="event-id ng-binding">(30847812)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>5.5<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">13 Mar 23:30</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€350 Turbo Monster Rebuy <span class="event-id ng-binding">(30848186)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>2.2<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">13 Mar 23:35</div>
+                                        <div class="name">
+                                            <span class="ng-binding">Monster Rebuy Sat to Big Break (2 Tickets GTD) <span class="event-id ng-binding">(30848280)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>0.22<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">13 Mar 23:50</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€50 6 Max Turbo Freezeout <span class="event-id ng-binding">(30848589)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>2.2<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">13 Mar 23:55</div>
+                                        <div class="name">
+                                            <span class="ng-binding">Super Turbo Sat to Treasure Island <span class="event-id ng-binding">(30848689)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>5.5<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 0:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€2,000 Turbo Deep Stack Rebuy <span class="event-id ng-binding">(30848783)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>11<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 0:05</div>
+                                        <div class="name">
+                                            <span class="ng-binding">Monster Rebuy Sat to The Mosh Pit <span class="event-id ng-binding">(30848889)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>0.55<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 0:10</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€500 Treasure Island <span class="event-id ng-binding">(30849004)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>22<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 0:30</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€200 Deep Stack Turbo Rebuy <span class="event-id ng-binding">(30849427)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>5.5<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 0:50</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€300 1R1A 6 Max <span class="event-id ng-binding">(30849878)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>2.2<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 1:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€1,000 Lost Vegas <span class="event-id ng-binding">(30850089)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>11<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 1:10</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€300 Freezeout <span class="event-id ng-binding">(30850277)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>11<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 1:25</div>
+                                        <div class="name">
+                                            <span class="ng-binding">Monster Rebuy Sat to Big Break (2 Tickets GTD) <span class="event-id ng-binding">(30850590)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>0.22<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 1:30</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€150 6 Max Turbo Freezeout <span class="event-id ng-binding">(30850719)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>3.3<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 1:30</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€1,000 Avalon 2 <span class="event-id ng-binding">(30850721)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>55<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 1:39</div>
+                                        <div class="name">
+                                            <span class="ng-binding">Flip Sat to Big Break <span class="event-id ng-binding">(30850925)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>0.5<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 1:40</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€500 Revitalizing Rebuy <span class="event-id ng-binding">(30850948)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>5.5<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 2:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€1,000 Fantastic Four <span class="event-id ng-binding">(30851412)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>5.5<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 2:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">The Most Interesting €4,000 Tournament in the World <span class="event-id ng-binding">(30851414)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>11<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 2:05</div>
+                                        <div class="name">
+                                            <span class="ng-binding">Turbo Rebuy Sat to Gigabyte (5 Tickets Guaranteed) <span class="event-id ng-binding">(30851534)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>11<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 2:10</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€750 1R1A <span class="event-id ng-binding">(30851638)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>5.5<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 2:30</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€400 6 Max Freezeout <span class="event-id ng-binding">(30852130)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>22<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 2:50</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€200 Two Squared <span class="event-id ng-binding">(30852578)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>2.2<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 3:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">Monster Rebuy Sat to Mount Olympus <span class="event-id ng-binding">(30852831)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>2.2<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 3:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">KOMMUNEPOKER - Rømskog <span class="event-id ng-binding">(30484832)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>10<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 3:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€8,000 Daily Mosh Pit <span class="event-id ng-binding">(30852824)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>22<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 3:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">MPNPT Seat Only Final (Monster Rebuy) <span class="event-id ng-binding">(30740327)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>11<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 3:10</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€1,000 Turbo Deepstack Freezeout <span class="event-id ng-binding">(30853065)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>11<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 3:30</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€3,500 Mosh Pit Lite <span class="event-id ng-binding">(30853566)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>11<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 3:40</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€250 Omaha Rebuy <span class="event-id ng-binding">(30853800)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>3.3<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 3:45</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€1,000 Turbo Monster Rebuy <span class="event-id ng-binding">(30853923)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>5.5<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 4:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€1,500 Megabyte <span class="event-id ng-binding">(30854258)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>33<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 4:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€3,500 Gigabyte <span class="event-id ng-binding">(30854256)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>110<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 4:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€400 Kilobyte <span class="event-id ng-binding">(30854254)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>5.5<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 4:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€1,500 Rather Riveting Rebuy <span class="event-id ng-binding">(30854259)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>11<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 4:10</div>
+                                        <div class="name">
+                                            <span class="ng-binding">99 Cent Nonsense <span class="event-id ng-binding">(30854477)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>0.99<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 4:15</div>
+                                        <div class="name">
+                                            <span class="ng-binding">Turbo Rebuy Sat to High Society(2 Seats GTD) <span class="event-id ng-binding">(30854591)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>22<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 4:20</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€200 6 Max Nightly Hi Lo <span class="event-id ng-binding">(30817315)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>11<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 4:30</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€100 Anything But Holdem <span class="event-id ng-binding">(30854905)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>5.5<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 4:30</div>
+                                        <div class="name">
+                                            <span class="ng-binding">Turbo Sat to Mount Olympus <span class="event-id ng-binding">(30854910)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>11<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 4:35</div>
+                                        <div class="name">
+                                            <span class="ng-binding">Monster Rebuy Sat to Big Break (2 Tickets GTD) <span class="event-id ng-binding">(30855011)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>0.22<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 4:40</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€50 Burst Freezeout <span class="event-id ng-binding">(30855124)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>3.3<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 4:50</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€100 6 Max Rebuy <span class="event-id ng-binding">(30855342)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>1.1<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 5:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€2,500 King Tusk <span class="event-id ng-binding">(30855560)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>22<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 5:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€1,000 Daily Express <span class="event-id ng-binding">(30855561)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>11<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 5:20</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€200 Turbo Monster Rebuy <span class="event-id ng-binding">(30855958)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>1.1<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 5:30</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€2,000 Jungle Jim <span class="event-id ng-binding">(30856147)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>11<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 5:30</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€333 Nightly Threesome <span class="event-id ng-binding">(30856146)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>3.3<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 5:50</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€200 Turbo Freezeout <span class="event-id ng-binding">(30856514)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>5.5<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 6:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€1,500 Avalon <span class="event-id ng-binding">(30856665)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>55<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 6:10</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€150 Early Bird Deep Stack Freezeout <span class="event-id ng-binding">(30856827)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>5.5<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 6:30</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€1,000 Big Ante 1R1A <span class="event-id ng-binding">(30857122)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>22<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 6:40</div>
+                                        <div class="name">
+                                            <span class="ng-binding">The Hour Long tournament <span class="event-id ng-binding">(30857277)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>5.5<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 7:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€2,500 River of Riches <span class="event-id ng-binding">(30857550)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>11<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 7:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€400 Late Hi Lo Rebuy <span class="event-id ng-binding">(30857553)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>11<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 7:10</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€75 Super Turbo Freezeout <span class="event-id ng-binding">(30857683)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>3.3<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 7:30</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€50 Bursting Rebuy <span class="event-id ng-binding">(30857908)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>1.1<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 7:40</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€100 Early Bird 1R1A  <span class="event-id ng-binding">(30858008)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>2.2<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 8:30</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€25 Cheap as Chips <span class="event-id ng-binding">(30858424)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>1.1<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 8:40</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€200 Cooldown <span class="event-id ng-binding">(30858510)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>5.5<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 9:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€500 Lucky Firecracker <span class="event-id ng-binding">(30858629)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>11<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 9:30</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€100 Freezeout <span class="event-id ng-binding">(30858773)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>5.5<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 10:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€100 Reel Gems <span class="event-id ng-binding">(30858886)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>11<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 10:30</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€50 6 Max Freezeout <span class="event-id ng-binding">(30858964)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>3.3<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 11:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€200 Max Damage <span class="event-id ng-binding">(30859040)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>5.5<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 11:30</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€100 6 Max Turbo Freezeout <span class="event-id ng-binding">(30859110)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>11<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 12:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€50 Dragonz <span class="event-id ng-binding">(30859177)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>3.3<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 12:30</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€50 Freezeout <span class="event-id ng-binding">(30859248)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>5.5<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">14 Mar 13:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€100 Monster Mania <span class="event-id ng-binding">(30859304)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>1.1<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">15 Mar 3:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">KOMMUNEPOKER - Eidsberg <span class="event-id ng-binding">(30484843)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>10<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">15 Mar 3:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">MPNPT Seat Only Final (Freezeout) <span class="event-id ng-binding">(30757990)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>55<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">15 Mar 3:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">Poker.se - Exklusiv tisdagsturnering! <span class="event-id ng-binding">(30766346)</span></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">16 Mar 3:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">MPNPT Seat Only Final (1R1A) <span class="event-id ng-binding">(30776722)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>22<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">16 Mar 3:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">KOMMUNEPOKER - Halden <span class="event-id ng-binding">(30484860)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>10<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">17 Mar 3:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">Bunkern PK <span class="event-id ng-binding">(30847145)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>40<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">17 Mar 3:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">MPNPT Seat Only Final (Monster Rebuy) <span class="event-id ng-binding">(30796915)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>11<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">17 Mar 3:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">KOMMUNEPOKER - Fredrikstad <span class="event-id ng-binding">(30484868)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>10<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">18 Mar 3:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">KOMMUNEPOKER - Sarpsborg <span class="event-id ng-binding">(30484879)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>10<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">19 Mar 0:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">5 Seat Mega Sat to Mount Olympus <span class="event-id ng-binding">(30830591)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>22<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">19 Mar 0:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">3 Seat Mega Sat to High Society <span class="event-id ng-binding">(30830596)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>55<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">19 Mar 0:30</div>
+                                        <div class="name">
+                                            <span class="ng-binding">5 Seat Mega Sat to The Big Bad Wolf <span class="event-id ng-binding">(30831277)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>11<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">19 Mar 1:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€7,000 Big Top <span class="event-id ng-binding">(30831971)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>110<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">19 Mar 2:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">MPNPT Seat Only Final (Monster Rebuy) <span class="event-id ng-binding">(30833308)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>11<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">19 Mar 2:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€5,000 Big Break <span class="event-id ng-binding">(30833313)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>5.5<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">19 Mar 3:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">KOMMUNEPOKER - Hvaler <span class="event-id ng-binding">(30484886)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>10<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">19 Mar 3:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€15,000 Big Kahuna <span class="event-id ng-binding">(30834749)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>22<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">19 Mar 3:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">MPNPT Mega Sunday 5 Package Final <span class="event-id ng-binding">(30574150)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>200<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">19 Mar 3:30</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€10,000 Mount Olympus <span class="event-id ng-binding">(30835429)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>110<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">19 Mar 4:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€4,000 Big Bad Wolf <span class="event-id ng-binding">(30836102)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>55<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">19 Mar 4:30</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€10,000 High Society <span class="event-id ng-binding">(30836760)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>215<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">19 Mar 4:30</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€4,000 Big Foot <span class="event-id ng-binding">(30836759)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>11<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">19 Mar 6:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€2,000 Red Hot Devil <span class="event-id ng-binding">(30838362)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>55<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">19 Mar 6:30</div>
+                                        <div class="name">
+                                            <span class="ng-binding">€1,000 Hot as Hades <span class="event-id ng-binding">(30838788)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>11<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">20 Mar 3:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">KOMMUNEPOKER - Gran <span class="event-id ng-binding">(30845040)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>10<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">20 Mar 3:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">MPNPT Monday Package Final <span class="event-id ng-binding">(30852827)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>135<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">20 Mar 3:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">EMV Team Challenge #11 <span class="event-id ng-binding">(29273945)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>11<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">21 Mar 3:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">KOMMUNEPOKER - Jevnaker <span class="event-id ng-binding">(30845048)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>10<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">22 Mar 3:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">KOMMUNEPOKER - Lunner <span class="event-id ng-binding">(30842561)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>10<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">23 Mar 3:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">KOMMUNEPOKER - Lillehammer <span class="event-id ng-binding">(30845087)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>10<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">24 Mar 3:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">KOMMUNEPOKER - Gjøvik <span class="event-id ng-binding">(30845076)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>10<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">25 Mar 3:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">KOMMUNEPOKER - Vestre Toten <span class="event-id ng-binding">(30845102)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>10<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">25 Mar 3:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">KOMMUNEPOKER - Østre Toten <span class="event-id ng-binding">(30845120)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>10<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">26 Mar 2:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">Football Package to Russia <span class="event-id ng-binding">(30845280)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>11<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">26 Mar 3:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">KOMMUNEPOKER - Nord Aurdal <span class="event-id ng-binding">(30845140)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>10<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">26 Mar 3:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">KOMMUNEPOKER - Sør Aurdal <span class="event-id ng-binding">(30845128)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>10<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">27 Mar 3:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">EMV Team Challenge #12 <span class="event-id ng-binding">(29274002)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>11<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">27 Mar 3:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">KOMMUNEPOKER - Vestre Slidre <span class="event-id ng-binding">(30845151)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>10<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">27 Mar 3:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">KOMMUNEPOKER - Østre Slidre <span class="event-id ng-binding">(30845159)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>10<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">28 Mar 3:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">KOMMUNEPOKER - Søndre Land <span class="event-id ng-binding">(30845168)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>10<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">28 Mar 3:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">KOMMUNEPOKER - Nordre Land <span class="event-id ng-binding">(30845181)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>10<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">29 Mar 3:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">KOMMUNEPOKER - Vang <span class="event-id ng-binding">(30845204)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>10<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">29 Mar 3:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">KOMMUNEPOKER - Etnedal <span class="event-id ng-binding">(30845190)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>10<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">30 Mar 3:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">KOMMUNEPOKER - Gausdal <span class="event-id ng-binding">(30845209)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>10<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">30 Mar 3:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">KOMMUNEPOKER - Øyer <span class="event-id ng-binding">(30845220)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>10<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">31 Mar 3:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">KOMMUNEPOKER - Lom <span class="event-id ng-binding">(30845289)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>10<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">31 Mar 3:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">KOMMUNEPOKER - Lesja <span class="event-id ng-binding">(30845262)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>10<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">31 Mar 3:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">KOMMUNEPOKER - Dovre <span class="event-id ng-binding">(30843882)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>10<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">31 Mar 3:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">KOMMUNEPOKER - Våga <span class="event-id ng-binding">(30845306)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>10<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">31 Mar 3:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">KOMMUNEPOKER - Sel <span class="event-id ng-binding">(30845321)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>10<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">31 Mar 3:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">KOMMUNEPOKER - Skjåk <span class="event-id ng-binding">(30845279)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>10<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">01 Apr 3:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">KOMMUNEPOKER - Sør Fron <span class="event-id ng-binding">(30845356)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>10<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">01 Apr 3:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">KOMMUNEPOKER - Ringebu <span class="event-id ng-binding">(30845363)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>10<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">01 Apr 3:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">KOMMUNEPOKER - Nord Fron <span class="event-id ng-binding">(30845336)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>10<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">04 Apr 22:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">MPNPT Bratislava Package [Live Event] <span class="event-id ng-binding">(29292087)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>1500<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="item in vm.list" class="tournament flex-box ng-scope">
+                                        <div class="time ng-binding">04 Apr 22:00</div>
+                                        <div class="name">
+                                            <span class="ng-binding">MPNPT Bratislava Seat Only [Live Event] <span class="event-id ng-binding">(29292064)</span></span>
+                                            <span ng-if="item.buyInAmount > 0" class="ng-binding ng-scope"><em>Buy in: </em>550<em> EUR</em></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </poker-tournaments>
+                        <poker-winners ng-if="$root.isDesktop" class="ng-scope ng-isolate-scope">
+                            <div class="poker-winners">
+                                <header>
+                                    <span ng-bind-html="'poker.top-winners' | t" class="ng-binding">Todays Top <br> Winners</span>
+                                </header>
+                                <div class="poker-winners-feed top20">
+                                    <div ng-repeat="winner in vm.biggestWinners" class="ng-scope">
+                                        <div class="winner flex-auto">
+                                            <div class="country">
+                                                <img ng-src="assets/images/flags/NO.png" alt="" src="assets/images/flags/NO.png">
+                                                <span class="ng-binding">Melbu</span>
+                                            </div>
+                                            <div class="prize">
+                                                <span class="ng-binding">886.19 <em class="ng-binding">EUR</em></span>
+                                                <span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="winner in vm.biggestWinners" class="ng-scope">
+                                        <div class="winner flex-auto">
+                                            <div class="country">
+                                                <img ng-src="assets/images/flags/FI.png" alt="" src="assets/images/flags/FI.png">
+                                                <span class="ng-binding">Helsinki</span>
+                                            </div>
+                                            <div class="prize">
+                                                <span class="ng-binding">414.15 <em class="ng-binding">EUR</em></span>
+                                                <span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="winner in vm.biggestWinners" class="ng-scope">
+                                        <div class="winner flex-auto">
+                                            <div class="country">
+                                                <img ng-src="assets/images/flags/NO.png" alt="" src="assets/images/flags/NO.png">
+                                                <span class="ng-binding">Oppdal</span>
+                                            </div>
+                                            <div class="prize">
+                                                <span class="ng-binding">394.35 <em class="ng-binding">EUR</em></span>
+                                                <span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="winner in vm.biggestWinners" class="ng-scope">
+                                        <div class="winner flex-auto">
+                                            <div class="country">
+                                                <img ng-src="assets/images/flags/EE.png" alt="" src="assets/images/flags/EE.png">
+                                                <span class="ng-binding">Tartu</span>
+                                            </div>
+                                            <div class="prize">
+                                                <span class="ng-binding">319.00 <em class="ng-binding">EUR</em></span>
+                                                <span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="winner in vm.biggestWinners" class="ng-scope">
+                                        <div class="winner flex-auto">
+                                            <div class="country">
+                                                <img ng-src="assets/images/flags/SE.png" alt="" src="assets/images/flags/SE.png">
+                                                <span class="ng-binding">Trollhättan</span>
+                                            </div>
+                                            <div class="prize">
+                                                <span class="ng-binding">303.60 <em class="ng-binding">EUR</em></span>
+                                                <span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="winner in vm.biggestWinners" class="ng-scope">
+                                        <div class="winner flex-auto">
+                                            <div class="country">
+                                                <img ng-src="assets/images/flags/SE.png" alt="" src="assets/images/flags/SE.png">
+                                                <span class="ng-binding">Täby</span>
+                                            </div>
+                                            <div class="prize">
+                                                <span class="ng-binding">245.30 <em class="ng-binding">EUR</em></span>
+                                                <span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="winner in vm.biggestWinners" class="ng-scope">
+                                        <div class="winner flex-auto">
+                                            <div class="country">
+                                                <img ng-src="assets/images/flags/NO.png" alt="" src="assets/images/flags/NO.png">
+                                                <span class="ng-binding">Oslo</span>
+                                            </div>
+                                            <div class="prize">
+                                                <span class="ng-binding">163.93 <em class="ng-binding">EUR</em></span>
+                                                <span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="winner in vm.biggestWinners" class="ng-scope">
+                                        <div class="winner flex-auto">
+                                            <div class="country">
+                                                <img ng-src="assets/images/flags/NO.png" alt="" src="assets/images/flags/NO.png">
+                                                <span class="ng-binding">Arendal</span>
+                                            </div>
+                                            <div class="prize">
+                                                <span class="ng-binding">146.46 <em class="ng-binding">EUR</em></span>
+                                                <span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="winner in vm.biggestWinners" class="ng-scope">
+                                        <div class="winner flex-auto">
+                                            <div class="country">
+                                                <img ng-src="assets/images/flags/FI.png" alt="" src="assets/images/flags/FI.png">
+                                                <span class="ng-binding">Turku</span>
+                                            </div>
+                                            <div class="prize">
+                                                <span class="ng-binding">141.96 <em class="ng-binding">EUR</em></span>
+                                                <span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="winner in vm.biggestWinners" class="ng-scope">
+                                        <div class="winner flex-auto">
+                                            <div class="country">
+                                                <img ng-src="assets/images/flags/FI.png" alt="" src="assets/images/flags/FI.png">
+                                                <span class="ng-binding">Pirkkala</span>
+                                            </div>
+                                            <div class="prize">
+                                                <span class="ng-binding">95.00 <em class="ng-binding">EUR</em></span>
+                                                <span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </poker-winners>
+                    </div>
+                </section>
+            </div>
+        </article>
+    </poker>
+</div>

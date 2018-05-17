@@ -1,0 +1,101 @@
+<div class="sports-menu-nav " >
+    <a ui-sref="sports.livebet"  role="button"  ui-sref-active="active"    >스포츠 <span ng-bind="LS.length" class="counts"></span> </a>
+    <a ui-sref="sports.prematch"  role="button"  ui-sref-active="active" >스포츠 <span ng-bind="PM.length" class="counts"></span> </a>
+</div>
+<section class="sports-menu animated fadeIn" style="min-height: 1148px;" >
+    <div class="sports-menu-inner">
+        <div class="sports-menu-tree ">
+            <!-- <a href="/en/sports" class="active" >
+                <h1 class="">
+                    Top Sports
+                </h1>
+            </a> -->
+            <!-- <div class="menu-switch">
+                <button class="btn  active" ng-click="toggleMatchMode()" ng-class="live_mode ? 'active': '' "  >스포츠 <span ng-bind="LS.length" class="counts"></span></button>
+                <button class="btn " ng-click="toggleMatchMode()" ng-class="!live_mode ? 'active': ''" >스포츠 <span ng-bind="PM.length" class="counts"></span></button>
+            </div> -->
+            <ul ng-show="uiRouterState.current.name == 'sports.livebet'" >
+                <li ng-repeat="(key_sp,value_sp) in LS | orderBy:['SId','RId','CId'] | groupBy:'SId'">
+                    
+                    <a  ng-click="toggleShow(value_sp[0],'showList'); $event.stopPropagation();" ng-class="value_sp[0].showList ? 'active' : ''">
+                        <img ng-src="./images/ibet/sport_s/{{value_sp[0].SId}}.png">
+                        {{ value_sp[0].SN }}
+                        <span ng-bind="value_sp.length" ng-show="!value_sp[0].showList" class="sports-count"></span>
+                    </a>
+                    <ul ng-show="value_sp[0].showList" class="sub-list animated fadeInDown">
+                        <li ng-repeat="(key_rg,value_rg ) in value_sp | orderBy:['SId','RId','CId'] | groupBy:'RN'">
+                            <a  ng-click="toggleShow(value_rg[0],'showSubList'); $event.stopPropagation();" >
+
+                                <img ng-src="./images/ibet/region_s/{{value_rg[0].RId}}.png">
+                                {{key_rg}}
+                                <div class="sports-count">{{value_rg.length}}</div>
+                            </a>
+
+                             <ul class="sub-sub-list animated fadeInDown" ng-show="value_rg[0].showSubList" >
+                                <li ng-repeat="(key_cp, value_cp ) in value_rg  | orderBy:['SId','RId','CId'] | groupBy:'CN'">
+                                    <a  ng-click="toggleShow(value_cp[0],'showMatchDetails'); $event.stopPropagation();">
+                                        {{key_cp.substring(0,25)}}
+                                        <div class="sports-count">{{value_cp.length}}</div>
+                                    </a>
+                                    <div class="match_detail animated fadeInDown" ng-show="value_cp[0].showMatchDetails" ng-repeat="mem in value_cp | orderBy:'MId'"  style="padding:10px;">     
+                                        <div class="row nopadding" ng-click="goMatchMarket(value_cp[0]); $event.stopPropagation(); ">
+                                            <div class="col-md-12">
+                                                <div class="col-md-10"  ng-bind="mem.HT"></div>
+                                                <div class="col-md-2" ng-bind="mem.HTS"></div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="col-md-10" ng-bind="mem.AT"></div>
+                                                <div class="col-md-2" ng-bind="mem.ATS"></div>
+                                            </div>
+                                        </div>    
+                                        <!-- <table  class="left_menu_in_1 ng-scope" cellpadding="0" cellspacing="0" ng-click="goMatchMarket(value_cp[0]); $event.stopPropagation(); ">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="left_menu_in_1_l" ng-bind="mem.HT"></td>  
+                                                    <td class="left_menu_in_1_r" style="    margin-left: 40px;" ng-bind="mem.HTS"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left_menu_in_1_l" ng-bind="mem.AT"></td>
+                                                    <td class="left_menu_in_1_r" style="    margin-left: 40px;" ng-bind="mem.ATS"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left_menu_in_1_l">
+                                                        <span class="font_001" ng-bind="">전반전</span> 
+                                                    </td>
+                                                    <td class="left_menu_count_1">                                                                                                      
+                                                        <div><i class="fa fa-fw fa-lock"></i></div>
+                                                    </td>                                                                                                   
+                                                </tr>
+                                            </tbody>                               
+                                        </table> -->
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul ng-show="uiRouterState.current.name != 'sports.livebet'" >
+                <li ng-repeat="(key_pm,value_pm) in PM | orderBy:'SId' | groupBy:'SN'">
+                    <a  ng-click="toggleShow(value_pm[0],'showSubList'); $event.stopPropagation();"   ng-class="value_pm[0].showSubList ? 'active' : ''">
+                        <img ng-src="./images/ibet/sport_s/{{value_pm[0].SId}}.png">
+                        {{key_pm}}
+                        <div class="sports-count">{{value_pm.length}}</div>
+                    </a>
+
+                    <ul class="sub-sub-list" ng-show="value_pm[0].showSubList" >
+                        <li ng-repeat="(key_rg,value_rg) in value_pm | orderBy:'RN' | groupBy:'RN' " >
+                            <a  ng-click="goMatchMarket(value_rg[0]); $event.stopPropagation();" >
+                                <img ng-src="./images/ibet/region_s/{{value_rg[0].RId}}.png" class="region_img">
+                                {{key_rg}}
+                                <div class="sports-count">{{value_rg.length}}</div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+             
+    </div>
+</section>

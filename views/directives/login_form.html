@@ -1,0 +1,124 @@
+<style>
+    .signup-bg{
+        background: url(./images/ibet/logo.png);
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        filter: blur(5px);
+    }
+</style>
+
+<div class="profile-view signup-page raf-signup ng-scope">
+    <div class="row">
+        <div class="signup-bg">
+    
+        </div>
+        <div class="auth-form signup-form dark-form  animated zoomIn">
+                <div class="form-header">
+                    <div class="row">
+                        <div class="col-sm-12 text-center">
+                            <h3 class="ng-binding">회원가입</h3>
+                            <h4>IBET25에 오신것을 환영합니다.<h4>
+                            <h4>회원가입을 하시면 보다 폭넓은 서비스 이용이 가능합니다.</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="steps-container">
+                    <div class="ng-scope">
+                        <form ng-class="{'active': true}" autocomplete="off" name="signupStep1" novalidate="" class="ng-pristine ng-scope ng-invalid ng-invalid-required ng-valid-pattern ng-valid-maxlength active">
+                            <div class="form-group row">
+                                <h4 class="ng-binding">Email / Password</h4>
+                                <div class="col-xs-8">
+                                    <input type="email" name="email" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-pattern" ng-attr-placeholder="Email" ng-pattern="/[a-zA-Z0-9!#$%&amp;'*+=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&amp;'*+=?^_`{|}~-]+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/" placeholder="Email">
+                                </div>
+                                <div class="col-xs-4 ng-scope" >
+                                    <input type="password" name="password" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-pattern ng-valid-maxlength" ng-attr-placeholder="Password" id="su_password" ng-model-options="{ debounce: 1000 }" ng-maxlength="25" ng-pattern="/^(?=.*[0-9])(?=.*[a-zA-Z!@#$%^&amp;*]).{8,25}$/"  placeholder="Password" required="required"><span class="password-strength-indicator"><span></span><span></span><span></span><span></span></span>
+                                </div>
+                               
+                            </div>
+                            <div class="form-group row">
+                                <h4 class="ng-binding">Country / Currency</h4>
+                                <div class="col-xs-9">
+                                    <select name="country" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" id="su_country" ng-attr-data-placeholder="Country"   data-placeholder="Country">
+                                        <option value="" class="" selected="selected"></option>
+                                        <option label="Finland" value="FI">Finland</option>
+                                        <option label="Norway" value="NO">Norway</option>
+                                        <option label="Sweden" value="SE">Sweden</option>
+                                        <option label="Estonia" value="EE">Estonia</option>
+                                        <option label="Iceland" value="IS">Iceland</option>
+                                        <option label="Netherlands" value="NL">Netherlands</option>
+                                        <option label="New Zealand" value="NZ">New Zealand</option>
+                                        <option label="Germany" value="DE">Germany</option>
+                                        <option label="Switzerland" value="CH">Switzerland</option>
+                                        <option label="Rest of the World" value="ROW">Rest of the World</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-3">
+                                    <select name="currency" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" chosen="" id="su_currency" ng-attr-data-placeholder="Currency"   data-placeholder="Currency">
+                                        <option value="?" selected="selected"></option>
+                                        <option label="EUR" value="EUR">EUR</option>
+                                        <option label="NOK" value="NOK">NOK</option>
+                                        <option label="SEK" value="SEK">SEK</option>
+                                        <option label="USD" value="USD">USD</option>
+                                    </select>
+                                </div>
+                                
+                            </div>
+                            <div class="form-group row">
+                                <h4 class="ng-binding">Mobile phone</h4>
+                                <div class="col-xs-3">
+                                    <select name="phone_prefix" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" chosen="" id="su_phone_code" ng-attr-data-placeholder="Prefix" data-placeholder="Prefix">
+                                        <option value="?" selected="selected"></option>
+                                        <option label="+31" value="+31">+31</option>
+                                        <option label="+354" value="+354">+354</option>
+                                        <option label="+358" value="+358">+358</option>
+                                        <option label="+372" value="+372">+372</option>
+                                        <option label="+41" value="+41">+41</option>
+                                        <option label="+46" value="+46">+46</option>
+                                        <option label="+47" value="+47">+47</option>
+                                        <option label="+49" value="+49">+49</option>
+                                        <option label="+64" value="+64">+64</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-9">
+                                    <input type="tel" name="phone_number" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-maxlength" ng-attr-placeholder="Mobile number" id="su_phone_number" maxlength="16"  placeholder="Mobile number">
+                                </div>
+                                
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-12">
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="accept_terms_and_conditions"  server-error="" required="" id="su_terms_cond" class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required">
+                                        <label for="su_terms_cond">
+                                            <span ng-bind-html="'ui.registration.acceptterms' | t" class="ng-binding">I agree to the <a href="/en/terms" target="_blank">Terms</a>, and have read the <a href="/en/privacy-policy" target="_blank">Privacy Policy,</a> including the  <a href="/en/cookie-policy" target="_blank">Cookie Policy</a>.</span>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <span class="help-block alert alert-danger ng-binding ng-hide" ng-show="signupStep1.accept_terms_and_conditions.$error.required &amp;&amp; (signupStep1.accept_terms_and_conditions.$dirty || signupStep1.$submitted)">
+                                            Terms and conditions must be accepted!
+                                        </span>
+                                        <span class="help-block alert alert-danger ng-binding ng-hide" ng-show="vm.errors.accept_terms_and_conditions &amp;&amp; signupForm.accept_terms_and_conditions.$error.server">
+                                            false
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group form-footer clearfix footer-controls1 active" ng-class="{'active': $root.signupStep == 1}">
+                                <div class="col-sm-12  col-xs-12 text-center">
+                                    <button type="submit" class="btn action-btn green-btn  full-width small-btn" ng-click="vm.showGreeting = false; vm.showTextPromo1 = false; vm.showTextPromo2 = true;  vm.showTextPromo3 = false">
+                                    <span class="ng-binding">회원가입
+                                        <i class="fa fa-arrow-circle-right"></i>
+                                    </span>
+                                    </button>
+                                    <p class="small top20 ng-binding">추천인 아이디를 제외한 모든 항목은 필수 입력 사항 입니다.</p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+    </div>
+
+</div>

@@ -1,0 +1,40 @@
+<div class="modal-dialog modal-sm">
+    <div class="modal-content" uib-modal-transclude="">
+        <div class="ng-scope">
+            <span class="ns-close ns-close-big" ng-click="closeMe()"></span>
+            <auth-login class="ng-isolate-scope">
+                
+                <form method="post"  ame="loginForm" class="login-form ng-pristine ng-scope ng-valid-email ng-invalid ng-invalid-required" novalidate="">
+                    <fieldset class="">
+                        <div class="col-md-offset-1 col-md-10">
+                            <div class="logo">
+                                <a  ui-sref="index" href="/en/sports">
+                                    <img src="./images/ibet/logo.png" class="animated zoomIn" alt="ibet25 logo">
+                                </a>
+                                <h4 class='text-center'>로그인</h4>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control ng-pristine ng-untouched ng-empty ng-valid-email ng-invalid ng-invalid-required" focus-input="true" name="email"  required=""  placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" name="password" required=""  placeholder="Password">
+                                <a href="#" class="link input-link ">Forgot?</a>
+                                <!-- <span class="help-block alert alert-danger no-margin top10  ng-hide"></span> -->
+                            </div>
+                             <div class="form-group">
+                                <button type="submit" class="action-btn" >
+                                <span class="">로그인<i class="fa fa-arrow-circle-right "></i></span>
+                                </button>
+                            </div>
+                            <div class="text-center">
+                                <p>아직 회원이 아니시라면 회원가입 후 이용해 주시기 바랍니다.</p>
+                                <a class="btn-small" href="#" >회원가입</a>
+                            </div>
+                        </fieldset>
+                    </div>
+                    
+                </form>
+            </auth-login>
+        </div>
+    </div>
+</div>

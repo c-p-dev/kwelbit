@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+
+<html data-ng-app="ibet" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>IBET 26</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="IBET25">
+    <meta name='description' content='IBET25 - sports and casino cloud platform enterprise online software develop company.' />
+    <meta name="author" content="IBET25">
+    <meta name='keywords' content='IBET25 IBET25 IBET25 IBET25 IBET25' />
+    <link href="images/ibet/favicon.ico" rel="icon">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400italic,300italic,700italic,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Exo+2:700,800&amp;subset=cyrillic" rel="stylesheet">
+</head>
+
+<body data-ng-controller="appCtrl" ng-attr-id="{{$root.pageId}}" id="prematch" >
+    
+    <div class="splash animated hidden-lg fadeAway" ng-class="::{'fadeAway': true}">
+        <img src="/images/ibet/logo.png" alt="www.coolbet.com" class="animated zoomIn">
+        <div class="loader animated fadeInUp">
+            <svg class="circular" viewBox="25 25 50 50">
+                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="4" stroke-miterlimit="10"></circle>
+            </svg>
+        </div>
+    </div>
+
+    <div id="page-content" class="ng-scope">
+        <koolbetheader>
+        </koolbetheader>
+        <div class="container-fluid">
+            <div ui-view="" class="ng-scope">
+                <div ui-view></div>
+                <div ui-view="signupModal" ></div>
+            </div>
+        </div>
+        <button id="randomInt"></button>
+        
+        <div id="footer">
+            <ffooter></ffooter>
+        </div>
+    </div>
+    
+    <!-- required js  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-animate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-touch/1.6.9/angular-touch.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-filter/0.5.17/angular-filter.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.appear/0.3.6/jquery.appear.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/jquery.slicknav.min.js"></script>
+
+    <!-- default styles  and script -->
+    <link rel="stylesheet" href="https://www.coolbet.com/assets/styles/animate.min.css">
+    <link rel="stylesheet" href="https://www.coolbet.com/assets/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.coolbet.com/assets/styles/toastr.min.css">
+    <link rel="stylesheet" href="https://www.coolbet.com/assets/styles/slick.css">
+    <link rel="stylesheet" href="https://www.coolbet.com/assets/styles/slick-theme.css">
+    <!-- <link rel="stylesheet" href="https://www.coolbet.com/assets/styles/awesome-bootstrap-checkbox.css"> -->
+    <link rel="stylesheet" href="https://www.coolbet.com/assets/styles/lightslider.min.css">
+    <!-- <link rel="stylesheet" href="https://www.coolbet.com/assets/styles/master.css?v=2.0.0"> -->
+    <script type="application/javascript" src="./js/modernizr.js"></script>
+
+
+    <!-- custom styles and javascript -->
+    <script src="node_modules/angular-carousel/dist/angular-carousel.js"></script>
+    <link href="node_modules/angular-carousel/dist/angular-carousel.css" rel="stylesheet" type="text/css" />
+
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <script type="application/javascript" src="./js/app.js"></script>
+    <script type="application/javascript" src="./js/sports.js"></script>
+    <script type="application/javascript" src="./js/sample_data.js"></script>
+
+
+
+    <!-- <link rel="stylesheet" type="text/css" href="dist/main.css"> -->
+    <!-- <script type="application/javascript" src="dist/bundle.js"></script> -->
+    
+    <link rel="stylesheet" type="text/css" href="assets/styles/master.css" >
+    <link rel="stylesheet" type="text/css" href="assets/styles/components.css">
+    <link rel="stylesheet" type="text/css" href="css/ibet.css">
+   
+
+</body>
+
+
+</html>

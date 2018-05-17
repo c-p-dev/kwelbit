@@ -1,0 +1,199 @@
+<style>
+    
+    .img_fixer{
+        width: 263px!important;
+        height: 172px!important;
+    }
+</style>
+<div class="clearfix ">
+    <casino-sidebar class="">
+    <aside class="casino-sidebar ">
+        <div class="casino-sidebar-inner" role="toolbar">
+            <div class="free-commission-badge animated flipInX delay2000 top15 ">
+                <div class="frame-inner">
+                    <div class="cc animated flipInX delay3500 ">
+                        <img src="https://www.coolbet.com/assets/images/cc-zero.png" alt="">
+                    </div>
+                    <div class="promo-text">
+                        <h1 class="animated fadeInDown delay3500 ng-binding" ng-bind-html="'ui.marketing.comissionfree' | t">Commission <br> Free</h1>
+                        <ul class="animated fadeInUp delay3500">
+                            <li class="ng-binding">Deposits</li>
+                            <li class="ng-binding">Payouts</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="search-casino">
+                <casino-search categories="searchResults" focused="focused" class="">
+                <div class="search-container" ng-class="{'open': vm.query.name.length > 0}">
+                    <div class="search-module" focus-input="true">
+                        <div class="search-input">
+                            <div class="form-group">
+                                <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-empty" focus-input="" value="" focused="focused" ng-model-options="{ debounce: 500}" placeholder="게임찾기">
+                                <i class="fa fa-search"></i>
+                            </div>
+                        </div>
+                        <div class="search-results animated fadeIn ">
+                            <div ng-class="{'visible': vm.focused, 'hidden': !vm.focused}" class="hidden">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </casino-search>
+            </div>
+            <section class="sports-menu animated fadeIn">
+                <div class="sports-menu-inner">
+                    <div class="sports-menu-tree ">
+                        <ul>
+                            <li>
+                                <a href="#" class="active"> 전체  </a>
+                            </li>
+                            <li>
+                                <a href="#" class="">텍사스 사다리 게임</a>
+                            </li>
+                            <li>
+                                <a href="#" class="">행운의 룰렛</a>
+                            </li>
+                            <li>
+                                <a href="#" class="">피시 헌팅</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </aside>
+    </casino-sidebar>
+    <section class="casino-module">
+        <div class="commercials" style="margin-bottom: 10px;">
+            <div class="row">
+                <div class="commercial  col-md-12">
+                    <div id="jssor_1" style="position: relative; width: 1500px;  overflow: hidden; margin: 0 auto;">
+                        <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 1500px; height: auto; overflow: hidden;">
+                            <div>
+                                <a href="#"> <img src="http://content.ibet25.com/contents/banner/65.png" style="width: 1500px;"></a>
+                            </div>
+                        </div>
+                        <!-- Bullet Navigator -->
+                        <div data-u="navigator" class="jssorb051" style="position: absolute; bottom: 14px; right: 12px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
+                            <div data-u="prototype" class="i" style="width: 18px; height: 18px;">
+                                <svg viewbox="0 0 16000 16000" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                                    <circle class="b" cx="8000" cy="8000" r="5800"></circle>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div ui-view="" class="">
+            <casino games="games" class=" ">
+            <!-- <casino-menu class="">
+            <div class="product-closed" style="display: none;" ng-class="{'visible': $root.casinoClosed }"></div>
+            <nav class="casino-nav">
+                <div class="container-fluid">
+                    <ul class="casino-nav-menu ">
+                        <li class="">
+                            <a class="ng-binding  active" href="#">
+                                전체
+                            </a>
+                        </li>
+                        <li class="">
+                            <a class="ng-binding " href="#">
+                                텍사스 사다리 게임
+                            </a>
+                        </li>
+                        <li class="">
+                            <a class="ng-binding " href="#">
+                                행운의 룰렛
+                            </a>
+                        </li>
+                        <li class="">
+                            <a class="ng-binding " href="#">
+                                피시 헌팅
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="casino-nav-sort ">
+                    <li>
+                        <a ng-class="{'active': $root.gameOrder === 'name'}">
+                            A-Z
+                        </a>
+                    </li>
+                    <li>
+                        <a><i class="fa fa-list"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="active"><i class="fa fa-th-list"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a><i class="fa fa-bars"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            </casino-menu> -->
+            <casino-games-generator class="">
+            <section class="game-list clearfix">
+                <div class="">
+                    <figure class="game-image animated zoomIn">
+                        <casino-game-stakes game="game" class="">
+                        <div class="casino-stakes ">
+                        </div>
+                        </casino-game-stakes>
+                        <div class="ribbon left popular ">
+                            <span class="ng-binding">NEW</span>
+                        </div>
+                        <a href="/en/casino/game/gold-king/">
+                            <img  alt="Gold King" class="img_fixer" img-placeholder=""  src="http://www.bae90.com/images/betcon_casino/bc-ogwill.png" class=" ">
+                        </a>
+                    </figure>
+                    <figcaption class="animated fadeIn delay1000 ">
+                    <a class="ng-binding" href="#">텍사스 사다리</a>
+                    </figcaption>
+                </div>
+                <div class="">
+                    <figure class="game-image animated zoomIn">
+                        <casino-game-stakes game="game" class="">
+                        <div class="casino-stakes ">
+                        </div>
+                        </casino-game-stakes>
+                        <div class="ribbon left popular ">
+                            <span class="ng-binding">NEW</span>
+                        </div>
+                        <a href="/en/casino/game/gold-king/">
+                            <img  alt="Gold King" class="img_fixer" img-placeholder=""  src="http://www.bae90.com/images/wheel/roulette-icon.png" class=" ">
+                        </a>
+                    </figure>
+                    <figcaption class="animated fadeIn delay1000 ">
+                    <a class="ng-binding" href="#">피시 헌팅</a>
+                    </figcaption>
+                </div>
+                <div class="">
+                    <figure class="game-image animated zoomIn">
+                        <casino-game-stakes game="game" class="">
+                        <div class="casino-stakes ">
+                        </div>
+                        </casino-game-stakes>
+                        <div class="ribbon left popular ">
+                            <span class="ng-binding">NEW</span>
+                        </div>
+                        <a href="/en/casino/game/gold-king/">
+                            <img  alt="Gold King" class="img_fixer" img-placeholder=""  src="http://www.bae90.com/images/spincube/fishing2.png" class=" ">
+                        </a>
+                    </figure>
+                    <figcaption class="animated fadeIn delay1000 ">
+                    <a class="ng-binding" href="#">가상 모터 사이클</a>
+                    </figcaption>
+                </div>
+                
+            </section>
+        
+            </casino-games-generator>
+            </casino>
+        </div>
+    </section>
+</div>

@@ -1,0 +1,50 @@
+<section style="margin-top: 5px; margin-bottom:5px;">
+    <div>
+        <sport-match>
+            <article class="match mixed" >
+                <span class="close-button"></span>
+                <div class="match-time ng-binding" style="background: #1d1d1d url(./images/ibet/comp_m/{{img}}.png) no-repeat center;background-size: contain; ">
+                    
+                </div>
+                <section style=" background: url(./images/ibet/main_bet_name_1.jpg); background-size: cover;     height: 70px;"> 
+                    <header>
+                        <div class="match-info">
+                            <div class="match-name ng-scope">
+                                <h2>
+                                <span class="ng-binding">{{player1}}</span>
+                                <span class="devider">-</span>
+                                <span class="ng-binding">{{player2}}</span>
+                                </h2>
+                                <h3 class="ng-binding">
+                                <span class="sport-name ng-binding">{{gamecat}}</span>
+                                / {{mdate}}
+                                </h3>
+                            </div>
+
+                            
+                        </div>
+                    </header>
+                    <div class="match-odds">
+                        <div class="match-odds-wrap">
+                            <div  class="market-type ng-scope">
+                                <div class="promoted-market">
+
+                                    <div class="market-header" style="font-size: 15px;">
+                                        {{mdate}}
+                                    </div>
+                                </div>
+                                <sport-matchlist-promoted-markets class="ng-isolate-scope">
+                                <div viewport-watch="" style="position:relative" class="cell-2">
+                                    <div class="odds-item flash-">
+                                        베팅하기
+                                    </div>
+                                </div>
+                                </sport-matchlist-promoted-markets>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </article>
+        </sport-match>
+    </div>
+</section>

@@ -1,0 +1,561 @@
+<div class="clearfix ng-scope">
+    <casino-sidebar class="ng-isolate-scope">
+        <aside class="casino-sidebar ng-scope">
+            <div class="casino-sidebar-inner" role="toolbar">
+                <div class="free-commission-badge animated flipInX delay2000 top15 ng-scope" >
+                    <div class="frame-inner">
+                        <div class="cc animated flipInX delay3500 ">
+                            <img src="https://www.coolbet.com/assets/images/cc-zero.png" alt="">
+                        </div>
+                        <div class="promo-text">
+                            <h1 class="animated fadeInDown delay3500 ng-binding" ng-bind-html="'ui.marketing.comissionfree' | t">Commission <br> Free</h1>
+                            <ul class="animated fadeInUp delay3500">
+                                <li class="ng-binding">Deposits</li>
+                                <li class="ng-binding">Payouts</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="search-casino">
+                    <casino-search categories="searchResults" focused="focused" class="ng-isolate-scope">
+                        <div class="search-container" ng-class="{'open': vm.query.name.length > 0}" >
+                            <div class="search-module" focus-input="true">
+                                <div class="search-input">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-empty" focus-input=""  value=""   focused="focused"  ng-model-options="{ debounce: 500}" placeholder="Find a game">
+                                        <i class="icon-search ng-scope" ></i>
+
+                                    </div>
+                                </div>
+                                <div class="search-results animated fadeIn ">
+                                    <div ng-class="{'visible': vm.focused, 'hidden': !vm.focused}" class="hidden">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </casino-search>
+                </div>
+                <casino-jackpots class="ng-isolate-scope">
+                    <div class="jackpot-feed bottom20 ng-scope">
+                        <div class="lSSlideOuter vertical">
+                            <div class="lSSlideWrapper usingCss" style="height: 220px; transition-duration: 1000ms; transition-timing-function: ease;">
+                                <ul id="jackpot-slider" class="lightSlider lsGrab lSSlide" style="height: 843.333px; transform: translate3d(0px, -460px, 0px);">
+                                    <li  class="ng-scope clone left" style="height: 66.6667px; margin-bottom: 10px;">
+                                        <a class="jackpot-feed-item animated flipInX" >
+                                            <span>
+                                                <img ng-src="https://coolbet.imgix.net/MajorMillions5Reel.jpg" alt="Major Millions/" src="https://coolbet.imgix.net/MajorMillions5Reel.jpg">
+                                            </span>
+                                            <span> 
+                                                <span class="jackpot-amount ng-binding ng-scope" >
+                                                    584,937 EUR
+                                                </span> 
+                                                <span class="ng-binding">Major Millions</span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <h3 class="ng-binding">Jackpots</h3>
+                    </div>
+                </casino-jackpots>
+                <promotion-list show="'productSpecific'" slider="casinoPromo" number="1" pager="true" size="400" class="ng-isolate-scope">
+                    <slick settings="vm.slickConfig" class="ng-isolate-scope slick-initialized slick-slider slick-dotted" style="display: block;">
+                        <div aria-live="polite" class="slick-list draggable">
+                            <div class="slick-track" style="opacity: 1; width: 1780px; transform: translate3d(-1068px, 0px, 0px);" role="listbox">
+                                <div ng-repeat="promo in vm.promotions | orderBy:'display.order'" class="ng-scope slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" style="width: 356px;" tabindex="-1">
+                                    <a href="/en/casino-welcome-bonus" tabindex="-1">
+                                        <img class="imgix-fluid" ng-src="https://coolbet-cms.imgix.net/promotions/Casino_WB_v2-EN_1493215743065.png?w=400&amp;h=400&amp;fit=crop&amp;crop=entropy" src="https://coolbet-cms.imgix.net/promotions/Casino_WB_v2-EN_1493215743065.png?w=400&amp;h=400&amp;fit=crop&amp;crop=entropy">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="slick-dots" style="" role="tablist">
+                            <li class="" aria-hidden="true" role="presentation" aria-selected="true" aria-controls="navigation50" id="slick-slide50">
+                                <button type="button" data-role="none" role="button" tabindex="0">1</button>
+                            </li>
+                            <li aria-hidden="true" role="presentation" aria-selected="false" aria-controls="navigation51" id="slick-slide51" class="">
+                                <button type="button" data-role="none" role="button" tabindex="0">2</button>
+                            </li>
+                            <li aria-hidden="false" role="presentation" aria-selected="false" aria-controls="navigation52" id="slick-slide52" class="slick-active">
+                                <button type="button" data-role="none" role="button" tabindex="0">3</button>
+                            </li>
+                        </ul>
+                    </slick>
+                </promotion-list>
+            </div>
+        </aside>
+    </casino-sidebar>
+
+    <section class="casino-module">
+        <div ui-view="" class="ng-scope">
+            <casino games="games" class="ng-scope ng-isolate-scope">
+                <casino-menu class="ng-isolate-scope">
+                    <div class="product-closed" style="display: none;" ng-class="{'visible': $root.casinoClosed }"></div>
+                        <nav class="casino-nav">
+                            <div class="container-fluid">
+                                <ul class="casino-nav-menu ng-scope" >
+                                    <li   class="ng-scope">
+                                        <a  class="ng-binding ng-scope active" href="/en/casino/hot-Games">
+                                            Hot Games
+                                        </a>
+                                    </li>
+                                    <li   class="ng-scope">
+                                        <a  class="ng-binding ng-scope" href="/en/casino/slots">
+                                            Slots
+                                        </a>
+                                    </li>
+                                    <li   class="ng-scope">
+                                        <a  class="ng-binding ng-scope" href="/en/casino/video-poker">
+                                            Video Poker
+                                        </a>
+                                    </li>
+                                    <li   class="ng-scope">
+                                        <a  class="ng-binding ng-scope" href="/en/casino/table-games">
+                                            Table Games
+                                        </a>
+                                    </li>
+                                    <li   class="ng-scope">
+                                        <a  class="ng-binding ng-scope" href="/en/casino/jackpot-games">
+                                            Jackpot Games
+                                        </a>
+                                    </li>
+                                    <li   class="ng-scope">
+                                        <a  class="ng-binding ng-scope" href="/en/casino/all">
+                                            All
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <ul class="casino-nav-sort ng-scope">
+                                <li>
+                                    <a ng-class="{'active': $root.gameOrder === 'name'}">
+                                        A-Z
+                                    </a>
+                                </li>
+                                <li>
+                                    <a  ng-class="{'active': !$root.showBigIcons &amp;&amp; !$root.showGamesList}"><i class="icon-th"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a  ng-class="{'active': $root.showBigIcons}" class="active"><i class="icon-th-large"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a  ng-class="{'active': $root.showGamesList}"><i class="icon-list"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                </casino-menu>
+                <casino-games-generator class="ng-isolate-scope">
+                    <section class="game-list clearfix">
+                        <div class="ng-scope">
+                            <figure class="game-image animated zoomIn">
+                                <casino-game-stakes game="game" class="ng-isolate-scope">
+                                <div  class="casino-stakes ng-scope">
+                                </div>
+                                </casino-game-stakes>
+                                <div class="ribbon left popular ng-scope" >
+                                    <span class="ng-binding">NEW</span>
+                                </div>
+                                <a  href="/en/casino/game/gold-king/">
+                                    <img ng-src="https://coolbet.imgix.net/goldking.jpg?w=200&amp;q=60&amp;dpr=2" alt="Gold King" img-placeholder=""  img-size="200"  src="https://coolbet.imgix.net/goldking.jpg?w=200&amp;q=60&amp;dpr=2" class="ng-scope ng-isolate-scope">
+                                </a>
+                            </figure>
+                            <figcaption class="animated fadeIn delay1000 ng-scope">
+                                <a  class="ng-binding" href="/en/casino/game/gold-king/">Gold King</a></figcaption>
+                        </div>
+                        <div class="ng-scope">
+                            <figure class="game-image animated zoomIn">
+                                <casino-game-stakes game="game" class="ng-isolate-scope">
+                                <div  class="casino-stakes ng-scope">
+                                </div>
+                                </casino-game-stakes>
+                                <div class="ribbon left popular ng-scope" >
+                                    <span class="ng-binding">NEW</span>
+                                </div>
+                                <a  href="/en/casino/game/asgardian-stones/">
+                                    <img ng-src="https://coolbet.imgix.net/asgardianstones_not_mobile_sw.jpg?w=200&amp;q=60&amp;dpr=2" alt="Asgardian Stones" img-placeholder=""  img-size="200"  src="https://coolbet.imgix.net/asgardianstones_not_mobile_sw.jpg?w=200&amp;q=60&amp;dpr=2" class="ng-scope ng-isolate-scope">
+                                </a>
+                            </figure>
+                            <figcaption class="animated fadeIn delay1000 ng-scope">
+                                <a  class="ng-binding" href="/en/casino/game/asgardian-stones/">Asgardian Stones</a></figcaption>
+                        </div>
+                        <div class="ng-scope">
+                            <figure class="game-image animated zoomIn">
+                                <casino-game-stakes game="game" class="ng-isolate-scope">
+                                <div  class="casino-stakes ng-scope">
+                                </div>
+                                </casino-game-stakes>
+                                <div class="ribbon left popular ng-scope" >
+                                    <span class="ng-binding">NEW</span>
+                                </div>
+                                <a  href="/en/casino/game/fruit-spin/">
+                                    <img ng-src="https://coolbet.imgix.net/jewelfruits_not_mobile_sw.jpg?w=200&amp;q=60&amp;dpr=2" alt="Fruit Spin" img-placeholder=""  img-size="200"  src="https://coolbet.imgix.net/jewelfruits_not_mobile_sw.jpg?w=200&amp;q=60&amp;dpr=2" class="ng-scope ng-isolate-scope">
+                                </a>
+                            </figure>
+                            <figcaption class="animated fadeIn delay1000 ng-scope">
+                                <a  class="ng-binding" href="/en/casino/game/fruit-spin/">Fruit Spin</a></figcaption>
+                        </div>
+                        <div class="ng-scope">
+                            <figure class="game-image animated zoomIn">
+                                <casino-game-stakes game="game" class="ng-isolate-scope">
+                                <div  class="casino-stakes ng-scope">
+                                </div>
+                                </casino-game-stakes>
+                                <div class="ribbon left popular ng-scope" >
+                                    <span class="ng-binding">NEW</span>
+                                </div>
+                                <a  href="/en/casino/game/planet-fortune/">
+                                    <img ng-src="https://coolbet.imgix.net/planetfortune.jpg?w=200&amp;q=60&amp;dpr=2" alt="Planet Fortune" img-placeholder=""  img-size="200"  src="https://coolbet.imgix.net/planetfortune.jpg?w=200&amp;q=60&amp;dpr=2" class="ng-scope ng-isolate-scope">
+                                </a>
+                            </figure>
+                            <figcaption class="animated fadeIn delay1000 ng-scope">
+                                <a  class="ng-binding" href="/en/casino/game/planet-fortune/">Planet Fortune</a></figcaption>
+                        </div>
+                        <div class="ng-scope">
+                            <figure class="game-image animated zoomIn">
+                                <casino-game-stakes game="game" class="ng-isolate-scope">
+                                <div  class="casino-stakes ng-scope">
+                                </div>
+                                </casino-game-stakes>
+                                <div class="ribbon left popular ng-scope" >
+                                    <span class="ng-binding">NEW</span>
+                                </div>
+                                <a  href="/en/casino/game/universal-monsters-the-phantoms-curse/">
+                                    <img ng-src="https://coolbet.imgix.net/phantomoftheopera_not_mobile_sw.jpg?w=200&amp;q=60&amp;dpr=2" alt="Universal Monsters: The Phantoms Curse" img-placeholder=""  img-size="200"  src="https://coolbet.imgix.net/phantomoftheopera_not_mobile_sw.jpg?w=200&amp;q=60&amp;dpr=2" class="ng-scope ng-isolate-scope">
+                                </a>
+                            </figure>
+                            <figcaption class="animated fadeIn delay1000 ng-scope">
+                                <a  class="ng-binding" href="/en/casino/game/universal-monsters-the-phantoms-curse/">Universal Monsters: The Phantoms Curse</a></figcaption>
+                        </div>
+                        <div class="ng-scope">
+                            <figure class="game-image animated zoomIn">
+                                <casino-game-stakes game="game" class="ng-isolate-scope">
+                                <div  class="casino-stakes ng-scope">
+                                </div>
+                                </casino-game-stakes>
+                                <div class="ribbon left popular ng-scope" >
+                                    <span class="ng-binding">NEW</span>
+                                </div>
+                                <a  href="/en/casino/game/twin-spin-deluxe/">
+                                    <img ng-src="https://coolbet.imgix.net/twinspindeluxe_not_mobile_sw.jpg?w=200&amp;q=60&amp;dpr=2" alt="Twin Spin Deluxe" img-placeholder=""  img-size="200"  src="https://coolbet.imgix.net/twinspindeluxe_not_mobile_sw.jpg?w=200&amp;q=60&amp;dpr=2" class="ng-scope ng-isolate-scope">
+                                </a>
+                            </figure>
+                            <figcaption class="animated fadeIn delay1000 ng-scope">
+                                <a  class="ng-binding" href="/en/casino/game/twin-spin-deluxe/">Twin Spin Deluxe</a></figcaption>
+                        </div>
+                        <div class="ng-scope">
+                            <figure class="game-image animated zoomIn">
+                                <casino-game-stakes game="game" class="ng-isolate-scope">
+                                <div  class="casino-stakes ng-scope">
+                                </div>
+                                </casino-game-stakes>
+                                <div class="ribbon left popular ng-scope" >
+                                    <span class="ng-binding">NEW</span>
+                                </div>
+                                <a  href="/en/casino/game/sea-hunter/">
+                                    <img ng-src="https://coolbet.imgix.net/seahunter.jpg?w=200&amp;q=60&amp;dpr=2" alt="Sea Hunter" img-placeholder=""  img-size="200"  src="https://coolbet.imgix.net/seahunter.jpg?w=200&amp;q=60&amp;dpr=2" class="ng-scope ng-isolate-scope">
+                                </a>
+                            </figure>
+                            <figcaption class="animated fadeIn delay1000 ng-scope">
+                                <a  class="ng-binding" href="/en/casino/game/sea-hunter/">Sea Hunter</a></figcaption>
+                        </div>
+                        <div class="ng-scope">
+                            <figure class="game-image animated zoomIn">
+                                <casino-game-stakes game="game" class="ng-isolate-scope">
+                                <div  class="casino-stakes ng-scope">
+                                </div>
+                                </casino-game-stakes>
+                                <div class="ribbon left hot ng-scope" ng-if="::game.attributes.indexOf('HOT') >= 0"><span class="ng-binding">HOT</span></div>
+                                <a  href="/en/casino/game/starburst/">
+                                    <img ng-src="https://coolbet.imgix.net/starburst_not_mobile_sw.jpg?w=200&amp;q=60&amp;dpr=2" alt="Starburst" img-placeholder=""  img-size="200"  src="https://coolbet.imgix.net/starburst_not_mobile_sw.jpg?w=200&amp;q=60&amp;dpr=2" class="ng-scope ng-isolate-scope">
+                                </a>
+                            </figure>
+                            <figcaption class="animated fadeIn delay1000 ng-scope">
+                                <a  class="ng-binding" href="/en/casino/game/starburst/">Starburst</a></figcaption>
+                        </div>
+                        <div class="ng-scope">
+                            <figure class="game-image animated zoomIn">
+                                <casino-game-stakes game="game" class="ng-isolate-scope">
+                                <div  class="casino-stakes ng-scope">
+                                </div>
+                                </casino-game-stakes>
+                                <div class="ribbon left popular ng-scope" >
+                                    <span class="ng-binding">NEW</span>
+                                </div>
+                                <a  href="/en/casino/game/finn-and-the-swirly-spin/">
+                                    <img ng-src="https://coolbet.imgix.net/finn_not_mobile_sw.jpg?w=200&amp;q=60&amp;dpr=2" alt="Finn and the Swirly Spin" img-placeholder=""  img-size="200"  src="https://coolbet.imgix.net/finn_not_mobile_sw.jpg?w=200&amp;q=60&amp;dpr=2" class="ng-scope ng-isolate-scope">
+                                </a>
+                            </figure>
+                            <figcaption class="animated fadeIn delay1000 ng-scope">
+                                <a  class="ng-binding" href="/en/casino/game/finn-and-the-swirly-spin/">Finn and the Swirly Spin</a></figcaption>
+                        </div>
+                        <div class="ng-scope">
+                            <figure class="game-image animated zoomIn">
+                                <casino-game-stakes game="game" class="ng-isolate-scope">
+                                <div  class="casino-stakes ng-scope">
+                                </div>
+                                </casino-game-stakes>
+                                <div class="ribbon left popular ng-scope" >
+                                    <span class="ng-binding">NEW</span>
+                                </div>
+                                <a  href="/en/casino/game/big-win-cat/">
+                                    <img ng-src="https://coolbet.imgix.net/bigwincat.jpg?w=200&amp;q=60&amp;dpr=2" alt="Big Win Cat" img-placeholder=""  img-size="200"  src="https://coolbet.imgix.net/bigwincat.jpg?w=200&amp;q=60&amp;dpr=2" class="ng-scope ng-isolate-scope">
+                                </a>
+                            </figure>
+                            <figcaption class="animated fadeIn delay1000 ng-scope">
+                                <a  class="ng-binding" href="/en/casino/game/big-win-cat/">Big Win Cat</a></figcaption>
+                        </div>
+                        <div class="ng-scope">
+                            <figure class="game-image animated zoomIn">
+                                <casino-game-stakes game="game" class="ng-isolate-scope">
+                                <div  class="casino-stakes ng-scope">
+                                </div>
+                                </casino-game-stakes>
+                                <div class="ribbon left popular ng-scope" >
+                                    <span class="ng-binding">NEW</span>
+                                </div>
+                                <a  href="/en/casino/game/reactoonz/">
+                                    <img ng-src="https://coolbet.imgix.net/reactoonz.jpg?w=200&amp;q=60&amp;dpr=2" alt="Reactoonz" img-placeholder=""  img-size="200"  src="https://coolbet.imgix.net/reactoonz.jpg?w=200&amp;q=60&amp;dpr=2" class="ng-scope ng-isolate-scope">
+                                </a>
+                            </figure>
+                            <figcaption class="animated fadeIn delay1000 ng-scope">
+                                <a  class="ng-binding" href="/en/casino/game/reactoonz/">Reactoonz</a></figcaption>
+                        </div>
+                        <div class="ng-scope">
+                            <figure class="game-image animated zoomIn">
+                                <casino-game-stakes game="game" class="ng-isolate-scope">
+                                <div  class="casino-stakes ng-scope">
+                                </div>
+                                </casino-game-stakes>
+                                <div class="ribbon left popular ng-scope" >
+                                    <span class="ng-binding">NEW</span>
+                                </div>
+                                <a  href="/en/casino/game/planet-of-the-apes/">
+                                    <img ng-src="https://coolbet.imgix.net/pota_not_mobile_sw.jpg?w=200&amp;q=60&amp;dpr=2" alt="Planet of the Apes" img-placeholder=""  img-size="200"  src="https://coolbet.imgix.net/pota_not_mobile_sw.jpg?w=200&amp;q=60&amp;dpr=2" class="ng-scope ng-isolate-scope">
+                                </a>
+                            </figure>
+                            <figcaption class="animated fadeIn delay1000 ng-scope">
+                                <a  class="ng-binding" href="/en/casino/game/planet-of-the-apes/">Planet of the Apes</a></figcaption>
+                        </div>
+                        <div class="ng-scope">
+                            <figure class="game-image animated zoomIn">
+                                <casino-game-stakes game="game" class="ng-isolate-scope">
+                                <div  class="casino-stakes ng-scope">
+                                </div>
+                                </casino-game-stakes>
+                                <div class="ribbon left popular ng-scope" >
+                                    <span class="ng-binding">NEW</span>
+                                </div>
+                                <a  href="/en/casino/game/prosperity-palace/">
+                                    <img ng-src="https://coolbet.imgix.net/prosperitypalace.jpg?w=200&amp;q=60&amp;dpr=2" alt="Prosperity Palace" img-placeholder=""  img-size="200"  src="https://coolbet.imgix.net/prosperitypalace.jpg?w=200&amp;q=60&amp;dpr=2" class="ng-scope ng-isolate-scope">
+                                </a>
+                            </figure>
+                            <figcaption class="animated fadeIn delay1000 ng-scope">
+                                <a  class="ng-binding" href="/en/casino/game/prosperity-palace/">Prosperity Palace</a></figcaption>
+                        </div>
+                        <div class="ng-scope">
+                            <figure class="game-image animated zoomIn">
+                                <casino-game-stakes game="game" class="ng-isolate-scope">
+                                <div  class="casino-stakes ng-scope">
+                                </div>
+                                </casino-game-stakes>
+                                <div class="ribbon left popular ng-scope" >
+                                    <span class="ng-binding">NEW</span>
+                                </div>
+                                <a  href="/en/casino/game/the-legend-of-shangri-la/">
+                                    <img ng-src="https://coolbet.imgix.net/shangrila_not_mobile_sw.jpg?w=200&amp;q=60&amp;dpr=2" alt="The Legend of Shangri-La" img-placeholder=""  img-size="200"  src="https://coolbet.imgix.net/shangrila_not_mobile_sw.jpg?w=200&amp;q=60&amp;dpr=2" class="ng-scope ng-isolate-scope">
+                                </a>
+                            </figure>
+                            <figcaption class="animated fadeIn delay1000 ng-scope">
+                                <a  class="ng-binding" href="/en/casino/game/the-legend-of-shangri-la/">The Legend of Shangri-La</a></figcaption>
+                        </div>
+                        <div class="ng-scope">
+                            <figure class="game-image animated zoomIn">
+                                <casino-game-stakes game="game" class="ng-isolate-scope">
+                                <div  class="casino-stakes ng-scope">
+                                </div>
+                                </casino-game-stakes>
+                                <div class="ribbon left popular ng-scope" >
+                                    <span class="ng-binding">NEW</span>
+                                </div>
+                                <a  href="/en/casino/game/mermaids-diamond/">
+                                    <img ng-src="https://coolbet.imgix.net/mermaidsdiamond.jpg?w=200&amp;q=60&amp;dpr=2" alt="Mermaid´s Diamond" img-placeholder=""  img-size="200"  src="https://coolbet.imgix.net/mermaidsdiamond.jpg?w=200&amp;q=60&amp;dpr=2" class="ng-scope ng-isolate-scope">
+                                </a>
+                            </figure>
+                            <figcaption class="animated fadeIn delay1000 ng-scope">
+                                <a  class="ng-binding" href="/en/casino/game/mermaids-diamond/">Mermaid´s Diamond</a></figcaption>
+                        </div>
+                        <div class="ng-scope">
+                            <figure class="game-image animated zoomIn">
+                                <casino-game-stakes game="game" class="ng-isolate-scope">
+                                <div  class="casino-stakes ng-scope">
+                                </div>
+                                </casino-game-stakes>
+                                <div class="ribbon left popular ng-scope" >
+                                    <span class="ng-binding">NEW</span>
+                                </div>
+                                <a  href="/en/casino/game/blood-suckers-ii/">
+                                    <img ng-src="https://coolbet.imgix.net/bloodsuckers2_not_mobile_sw.jpg?w=200&amp;q=60&amp;dpr=2" alt="Blood Suckers II" img-placeholder=""  img-size="200"  src="https://coolbet.imgix.net/bloodsuckers2_not_mobile_sw.jpg?w=200&amp;q=60&amp;dpr=2" class="ng-scope ng-isolate-scope">
+                                </a>
+                            </figure>
+                            <figcaption class="animated fadeIn delay1000 ng-scope">
+                                <a  class="ng-binding" href="/en/casino/game/blood-suckers-ii/">Blood Suckers II</a></figcaption>
+                        </div>
+                        <div class="ng-scope">
+                            <figure class="game-image animated zoomIn">
+                                <casino-game-stakes game="game" class="ng-isolate-scope">
+                                <div  class="casino-stakes ng-scope">
+                                </div>
+                                </casino-game-stakes>
+                                <div class="ribbon left popular ng-scope" >
+                                    <span class="ng-binding">NEW</span>
+                                </div>
+                                <a  href="/en/casino/game/wolf-cub/">
+                                    <img ng-src="https://coolbet.imgix.net/wolfcub_not_mobile_sw.jpg?w=200&amp;q=60&amp;dpr=2" alt="Wolf Cub" img-placeholder=""  img-size="200"  src="https://coolbet.imgix.net/wolfcub_not_mobile_sw.jpg?w=200&amp;q=60&amp;dpr=2" class="ng-scope ng-isolate-scope">
+                                </a>
+                            </figure>
+                            <figcaption class="animated fadeIn delay1000 ng-scope">
+                                <a  class="ng-binding" href="/en/casino/game/wolf-cub/">Wolf Cub</a></figcaption>
+                        </div>
+                        <div class="ng-scope">
+                            <figure class="game-image animated zoomIn">
+                                <casino-game-stakes game="game" class="ng-isolate-scope">
+                                <div  class="casino-stakes ng-scope">
+                                </div>
+                                </casino-game-stakes>
+                                <div class="ribbon left popular ng-scope" >
+                                    <span class="ng-binding">NEW</span>
+                                </div>
+                                <a  href="/en/casino/game/halloween/">
+                                    <img ng-src="https://coolbet.imgix.net/halloweenDesktop.jpg?w=200&amp;q=60&amp;dpr=2" alt="Halloween" img-placeholder=""  img-size="200"  src="https://coolbet.imgix.net/halloweenDesktop.jpg?w=200&amp;q=60&amp;dpr=2" class="ng-scope ng-isolate-scope">
+                                </a>
+                            </figure>
+                            <figcaption class="animated fadeIn delay1000 ng-scope">
+                                <a  class="ng-binding" href="/en/casino/game/halloween/">Halloween</a></figcaption>
+                        </div>
+                        <div class="ng-scope">
+                            <figure class="game-image animated zoomIn">
+                                <casino-game-stakes game="game" class="ng-isolate-scope">
+                                <div  class="casino-stakes ng-scope">
+                                </div>
+                                </casino-game-stakes>
+                                <div class="ribbon left popular ng-scope" >
+                                    <span class="ng-binding">NEW</span>
+                                </div>
+                                <a  href="/en/casino/game/emojiplanet/">
+                                    <img ng-src="https://coolbet.imgix.net/emoji_not_mobile_sw.jpg?w=200&amp;q=60&amp;dpr=2" alt="emojiplanet" img-placeholder=""  img-size="200"  src="https://coolbet.imgix.net/emoji_not_mobile_sw.jpg?w=200&amp;q=60&amp;dpr=2" class="ng-scope ng-isolate-scope">
+                                </a>
+                            </figure>
+                            <figcaption class="animated fadeIn delay1000 ng-scope">
+                                <a  class="ng-binding" href="/en/casino/game/emojiplanet/">emojiplanet</a></figcaption>
+                        </div>
+                        <div class="ng-scope">
+                            <figure class="game-image animated zoomIn">
+                                <casino-game-stakes game="game" class="ng-isolate-scope">
+                                <div  class="casino-stakes ng-scope">
+                                </div>
+                                </casino-game-stakes>
+                                <div class="ribbon left popular ng-scope" >
+                                    <span class="ng-binding">NEW</span>
+                                </div>
+                                <a  href="/en/casino/game/moon-princess/">
+                                    <img ng-src="https://coolbet.imgix.net/moonprincess.jpg?w=200&amp;q=60&amp;dpr=2" alt="Moon Princess" img-placeholder=""  img-size="200"  src="https://coolbet.imgix.net/moonprincess.jpg?w=200&amp;q=60&amp;dpr=2" class="ng-scope ng-isolate-scope">
+                                </a>
+                            </figure>
+                            <figcaption class="animated fadeIn delay1000 ng-scope">
+                                <a  class="ng-binding" href="/en/casino/game/moon-princess/">Moon Princess</a></figcaption>
+                        </div>
+                        <div class="ng-scope">
+                            <figure class="game-image animated zoomIn">
+                                <casino-game-stakes game="game" class="ng-isolate-scope">
+                                <div  class="casino-stakes ng-scope">
+                                </div>
+                                </casino-game-stakes>
+                                <div class="ribbon left popular ng-scope" >
+                                    <span class="ng-binding">NEW</span>
+                                </div>
+                                <a  href="/en/casino/game/sweet-27/">
+                                    <img ng-src="https://coolbet.imgix.net/sweet27.jpg?w=200&amp;q=60&amp;dpr=2" alt="Sweet 27" img-placeholder=""  img-size="200"  src="https://coolbet.imgix.net/sweet27.jpg?w=200&amp;q=60&amp;dpr=2" class="ng-scope ng-isolate-scope">
+                                </a>
+                            </figure>
+                            <figcaption class="animated fadeIn delay1000 ng-scope">
+                                <a  class="ng-binding" href="/en/casino/game/sweet-27/">Sweet 27</a>
+                            </figcaption>
+                        </div>
+                        <div class="ng-scope">
+                            <figure class="game-image animated zoomIn">
+                                <casino-game-stakes game="game" class="ng-isolate-scope">
+                                <div  class="casino-stakes ng-scope">
+                                </div>
+                                </casino-game-stakes>
+                                <div class="ribbon left popular ng-scope" >
+                                    <span class="ng-binding">NEW</span>
+                                </div>
+                                <a  href="/en/casino/game/gemix/">
+                                    <img ng-src="https://coolbet.imgix.net/gemix.jpg?w=200&amp;q=60&amp;dpr=2" alt="Gemix" img-placeholder=""  img-size="200"  src="https://coolbet.imgix.net/gemix.jpg?w=200&amp;q=60&amp;dpr=2" class="ng-scope ng-isolate-scope">
+                                </a>
+                            </figure>
+                            <figcaption class="animated fadeIn delay1000 ng-scope">
+                                <a  class="ng-binding" href="/en/casino/game/gemix/">Gemix</a>
+                            </figcaption>
+                        </div>
+                        <div class="ng-scope">
+                            <figure class="game-image animated zoomIn">
+                                <casino-game-stakes game="game" class="ng-isolate-scope">
+                                <div  class="casino-stakes ng-scope">
+                                </div>
+                                </casino-game-stakes>
+                                <div class="ribbon left popular ng-scope" >
+                                    <span class="ng-binding">NEW</span>
+                                </div>
+                                <a  href="/en/casino/game/butterfly-staxx/">
+                                    <img ng-src="https://coolbet.imgix.net/butterflystaxx_not_mobile_sw.jpg?w=200&amp;q=60&amp;dpr=2" alt="Butterfly Staxx" img-placeholder=""  img-size="200"  src="https://coolbet.imgix.net/butterflystaxx_not_mobile_sw.jpg?w=200&amp;q=60&amp;dpr=2" class="ng-scope ng-isolate-scope">
+                                </a>
+                            </figure>
+                            <figcaption class="animated fadeIn delay1000 ng-scope">
+                                <a  class="ng-binding" href="/en/casino/game/butterfly-staxx/">Butterfly Staxx</a></figcaption>
+                        </div>
+                        <div class="ng-scope">
+                            <figure class="game-image animated zoomIn">
+                                <casino-game-stakes game="game" class="ng-isolate-scope">
+                                <div  class="casino-stakes ng-scope">
+                                </div>
+                                </casino-game-stakes>
+                                <div class="ribbon left popular ng-scope" >
+                                    <span class="ng-binding">NEW</span>
+                                </div>
+                                <a  href="/en/casino/game/jurassic-world/">
+                                    <img ng-src="https://coolbet.imgix.net/jurassicWorldDesktop.jpg?w=200&amp;q=60&amp;dpr=2" alt="Jurassic World" img-placeholder=""  img-size="200"  src="https://coolbet.imgix.net/jurassicWorldDesktop.jpg?w=200&amp;q=60&amp;dpr=2" class="ng-scope ng-isolate-scope">
+                                </a>
+                            </figure>
+                            <figcaption class="animated fadeIn delay1000 ng-scope">
+                                <a  class="ng-binding" href="/en/casino/game/jurassic-world/">Jurassic World</a></figcaption>
+                        </div>
+                        <div class="ng-scope">
+                            <figure class="game-image animated zoomIn">
+                                <casino-game-stakes game="game" class="ng-isolate-scope">
+                                <div  class="casino-stakes ng-scope">
+                                </div>
+                                </casino-game-stakes>
+                                <div class="ribbon left popular ng-scope" >
+                                    <span class="ng-binding">NEW</span>
+                                </div>
+                                <a  href="/en/casino/game/copy-cats/">
+                                    <img ng-src="https://coolbet.imgix.net/copycats_not_mobile_sw.jpg?w=200&amp;q=60&amp;dpr=2" alt="Copy Cats" img-placeholder=""  img-size="200"  src="https://coolbet.imgix.net/copycats_not_mobile_sw.jpg?w=200&amp;q=60&amp;dpr=2" class="ng-scope ng-isolate-scope">
+                                </a>
+                            </figure>
+                            <figcaption class="animated fadeIn delay1000 ng-scope">
+                                <a  class="ng-binding" href="/en/casino/game/copy-cats/">Copy Cats</a>
+                            </figcaption>
+                        </div>
+                        
+                    </section>
+                </casino-games-generator>
+            </casino>
+        </div>
+    </section>
+</div>
+

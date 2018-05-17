@@ -1,0 +1,71 @@
+/* header */
+/* body */
+body {
+    position: relative;
+    background: #222;
+    font-family: "Roboto Condensed",sans-serif;
+    color: #fff;
+    padding-top: 0 !important;
+    background: #1c2021;
+    background-size: cover;
+}
+/* footer */
+/*sports*/
+
+.counts{
+    /*float: right;*/
+    border-radius: 10px;
+    padding: 0 7px 0 7px;
+    background: #52b3d6;
+    margin: 0 10px 0 0;
+    line-height: 20px;
+    color: #ffffff;
+    margin-left: 10px;
+}
+
+.sports-count{
+    float: right;
+    border-radius: 10px;
+    background: #1b1d1e;
+    line-height: 20px;
+    padding: 5px;
+    margin-right: 20px;
+}
+
+.sports-menu .sports-menu-inner .sports-menu-tree > ul li a.active{
+    
+    background: #2e3334 url(../images/ibet/accordion-opened.png) no-repeat 303px center!important;
+    background-size: 13px!important;
+}
+
+.sports-menu .sports-menu-inner .sports-menu-tree > ul li a {
+    background: #252525 url(../images/ibet/accordion-closed.png) no-repeat 303px center!important;
+    background-size: 13px!important;
+}
+
+.sub-list{
+    /*margin-left: 30px!important;*/
+    
+}
+
+ul.sub-list li a {
+    background: #1b1d1e url(../images/ibet/accordion-closed.png) no-repeat 51px center!important;
+}
+
+.match_detail {
+    background: black;
+}
+.region_img{
+    width: 30px;
+}
+
+
+/*games template*/
+.etc_left{
+    height: 200px;
+}
+
+.baseball_wrap .etc_left{
+    background: url(../images/ibet/live_bg_11.jpg);
+}
+

@@ -1,0 +1,326 @@
+<style>
+.odds-lists section {
+    margin-bottom: 10px;
+}
+.game-nav-cat{
+    background: #2d3232;
+    margin: 0 0 10px 0;
+    padding: 0px;
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom:10px;
+}
+.cat:hover , .cat .active{
+    
+    transition: 200ms border ease-in-out;
+    color: #01adef;
+    /*border-bottom: 1px solid #01adef;*/
+}
+.cat{
+    line-height: 40px;
+    border-right: 1px solid #000000;
+    cursor: pointer;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.game-nav-cat .cat:last-child{
+     border-right: none;
+}
+.cat .counts{
+    background: #384447;
+}
+
+
+
+.match-tbl table{
+    width: 100%;
+}
+.match-tbl table tr th{
+    
+    background: #262a2b;
+    border-left: solid 1px #1c2021;
+    text-align: center;
+    height:35px;
+    min-width: 15px;
+    max-width: 100px;
+    padding: 5px;
+    font-family: "Roboto Condensed",sans-serif;
+}
+.match-tbl table tbody tr td{
+    text-align: center;
+    cursor: pointer;
+    height: 34px;
+    padding: 10px;
+    border-right: solid 1px #1c2021;
+    border-bottom: solid 1px #1c2021;
+    background: #2d3232;
+    font-size: 13px;
+}
+.match-tbl table tbody tr:hover td{
+    background: #1e1e1e;
+    /*border-color: #3a3a3a;*/
+    transition: all 200ms ease-in;
+}
+i.fa{
+    color:#ffa800;
+}
+.f1, .f2, .f3{
+    color:#ffa800;
+}
+.bad-red{
+    color:red;
+     animation-name: pulsate;
+    /*animation-fill-mode: both;*/
+    /*animation-duration: 20s;*/
+}
+.good-green{
+    color:green;
+    animation-name: pulsate;
+    /*animation-fill-mode: both;*/
+    /*animation-duration: 20s;*/
+}
+
+
+.tbl{
+    padding: 0px!important;
+    margin: 0px!important;
+    float: none;
+
+}
+
+.tbl .row, .tbl .row .col-md-1 {
+    margin:0px;
+    padding:0px!important;
+}
+.tbl .row .col-md-1{
+    text-align: center;
+}
+
+.tbl .th .col-md-1{
+    background: #262a2b;
+    border-left: solid 1px #1c2021;
+    text-align: center;
+    height: 35px;
+    line-height: 35px;
+    padding: 5px;
+    font-family: "Roboto Condensed",sans-serif;
+}
+</style>
+<section class="odds-lists livenow">
+    <div class="search-group filters ng-scope">
+        <div class="filter-sports">
+            <div class="filter-scroller ng-scope" style="width: 295px;">
+                <button class="filter filter-sport animated flipInX ng-scope">
+                    <a data-toggle="tooltip" data-placement="top" title="" class="ng-scope football" data-original-title="Football">
+                        
+                         <img src="./images/ibet/sport_s/5.png">
+                    </a>
+                </button>
+                <button class="filter filter-sport animated flipInX ng-scope">
+                    <a data-toggle="tooltip" data-placement="top" title="" class="ng-scope tennis" data-original-title="Tennis">
+
+                        <img src="./images/ibet/sport_s/1.png">
+                    </a>
+                </button>
+                <button class="filter filter-sport animated flipInX ng-scope">
+                    <a data-toggle="tooltip" data-placement="top" title="" class="ng-scope basketball" data-original-title="Basketball">
+                       
+                        <img src="./images/ibet/sport_s/11.png">
+                    </a>
+                </button>
+                <button class="filter filter-sport animated flipInX ng-scope">
+                    <a data-toggle="tooltip" data-placement="top" title="" class="ng-scope esport" data-original-title="eSports">
+                        
+                        <img src="./images/ibet/sport_s/2.png">
+                    </a>
+                </button>
+                <button class="filter filter-sport animated flipInX ng-scope">
+                    <a data-toggle="tooltip" data-placement="top" title="" class="ng-scope rugby-league" data-original-title="Rugby League">
+                       
+                        <img src="./images/ibet/sport_s/3.png">
+                    </a>
+                </button>
+                <button class="filter filter-sport animated flipInX ng-scope">
+                    <a data-toggle="tooltip" data-placement="top" title="" class="ng-scope rugby-union" data-original-title="Rugby Union">
+                      
+                        <img src="./images/ibet/sport_s/4.png">
+                    </a>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="search-group category flex-box bottom10">
+        <div class="search-group-item">
+            <!-- search -->
+            <sport-search categories="searchResults" odds="oddsResults" class="-full ng-isolate-scope">
+                <div class="search search-sport" ng-class="open">
+                    <div class="search-container">
+                        <div class="search-module">
+                            <div class="search-input">
+                                <div class="form-group">
+                                    <input class="form-control ng-pristine ng-untouched ng-valid ng-scope ng-empty" value="" data-toggle="tooltip" placeholder="Search..." data-original-title="" title="">
+                                    <i class=" fa fa-search ng-scope"></i>
+                                    <div class="loader ng-hide" ng-show="vm.updatePending">
+                                        <svg class="circular" viewBox="25 25 50 50">
+                                            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="4" stroke-miterlimit="10"></circle>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </sport-search>
+        </div>
+        <!-- search group -->
+    </div>
+    <!-- games -->
+    <section>
+        <div class="game-nav-cat">
+            <div class="cat">
+                종목 선택 
+                <span ng-bind="PM.length" class="counts"></span>
+            </div>
+            <div class="cat">
+                리그 선택 
+                <span ng-bind="PM.length" class="counts"></span>
+            </div>
+            <div class="cat">
+             오늘 경기  
+             <span  class="counts">137</span>
+            </div>
+            <div class="cat">
+                05-12(토) 
+                <span ng-bind="PM.length" class="counts"></span>
+            </div>
+            <div class="cat">
+                05-13(일)
+                <span ng-bind="PM.length" class="counts"></span>
+            </div>
+            <div class="cat">
+                05-14(일)
+                <span  class="counts">44</span>
+            </div>
+            <div class="cat ">
+                05-15(일)
+                <span ng-bind="PM.length" class="counts"></span>
+            </div>
+            <div class="cat ">
+                05-16(일)
+                <span class="counts">13</span>
+            </div>
+            <div class="cat ">
+                05-17(일)
+                <span class="counts">12 </span>
+            </div>
+        </div>
+
+        <div class="match-tbl">
+            <table>
+                <tr>
+                    <th></th>                            
+                    <th>경기시각</th>
+                    <th>종목</th>
+                    <th>국가</th>
+                    <th>리그</th>
+                    <th>팀</th>
+                    <th>승</th>
+                    <th>무</th>
+                    <th>패</th>
+                    <th>더보기</th>    
+                </tr>
+                <tbody ng-repeat="(key,item) in sample_live_match_stats" ng-click="getMatchStat($event,item);">
+                    <tr >
+                        <td>
+                            <i class="fa fa-star-o"></i>
+                        </td>
+                        <td>
+                            <span>05-11 19:30</span>
+                        </td>
+                        <td>
+                            <img width="15" src="./images/ibet/sport_s/1.png"> 축구
+                        </td>
+                        <td>
+                            <img  src="./images/ibet/region_s/111.png" style="vertical-align:middle;width:14px;height:10px;margin-bottom:3px;">인도네시아
+                        </td>
+                        <td>프리메라 디비시온</td>
+                        <td>
+                            <span >우니베르시다드 카톨리카</span>
+                            <span>vs</span>
+                            <span >유니버시다드 데 칠레</span>
+                        </td>
+                        <td><span class="f1">2.07</span></td>
+                        <td><span class="f2">3.60</span></td>
+                        <td><span class="f3 good-green">3.12</span></td>
+                        <td><i class="fa fa-caret-down"></i></td>
+                        
+                    </tr>
+                    <tr ng-show="item.showme">
+                        <td colspan="10">
+                            <match-stats></match-stats>
+                        </td>
+                        
+                    </tr>
+                   
+                </tbody>
+            </table>
+
+            <!-- <div class="container tbl">
+                <div class="row ">
+                    <div class="col" ></div>
+                    <div class="col" >경기시각</div>
+                    <div class="col" >종목</div >
+                    <div class="col" >국가</div >
+                    <div class="col" >리그</div >
+                    <div class="col" >팀</div >
+                    <div class="col" >승</div >
+                    <div class="col" >무</div >
+                    <div class="col" >패</div >
+                    <div class="col" >더보기</div>  
+                </div>
+                <div class="row">
+                    <div class="col-md-1">
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <div class="col-md-1">
+                        <span>05-11 19:30</span>
+                    </div>
+                    <div class="col-md-1">
+                        <img width="15" src="./images/ibet/sport_s/1.png"> 축구
+                    </div>
+                    <div class="col-md-1">
+                        <img  src="./images/ibet/region_s/111.png" style="vertical-align:middle;width:14px;height:10px;margin-bottom:3px;">인도네시아
+                    </div>
+                    <div class="col-md-1">프리메라 디비시온</div>
+                    <div class="col-md-1">
+                        <span >우니베르시다드 카톨리카</span>
+                        <span>vs</span>
+                        <span >유니버시다드 데 칠레</span>
+                    </div>
+                    <div class="col-md-1">
+                        <span class="f1">2.07</span></div>
+                    <div class="col-md-1">
+                        <span class="f2">3.60</span></div>
+                    <div class="col-md-1">
+                        <span class="f3 good-green">3.12</span>
+                    </div>
+                    <div class="col-md-1">
+                        <i class="fa fa-caret-down"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    
+                </div>
+                <div class="col-md-12">
+                    
+                </div>
+            </div> -->
+        </div>
+        
+    
+
+
+    </section>
+</section>

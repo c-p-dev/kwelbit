@@ -1,0 +1,15 @@
+<div class="betslip-module fixed" ng-class="fixed">
+    <betslip-header-tabs>
+    </betslip-header-tabs>
+    <div class="tab-content">
+        <betslip-header-types  class="ng-isolate-scope">
+        </betslip-header-types>
+        <!--  dynamic bets -->
+        <div class="bets-list" ng-hide="$root.betHistory || vm.CashoutService.selected">
+            <betslip-type-single class="ng-isolate-scope">
+            </betslip-type-single>
+        </div> 
+        
+
+    </div>
+</div>

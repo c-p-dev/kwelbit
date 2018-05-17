@@ -1,0 +1,88 @@
+<div class="baseball_wrap game_temp">
+	<div class="etc_left "> {{ (LS|filter:{MId:tabMId})[0].CName }}  
+		<a href="#" class="live_sport_b" ng-click="goLiveMatch(lm[0].l,lm[0].c)"> ◀ </a>  
+		<ul>
+			<li>
+				<div class="etc_score_team_t"></div>
+				<div class="etc_score_team_c_1"> {{ liveTop[0].Period }} 회
+					<span class="etc_time" ng-show="liveTop[0].Side == '1'"> {{ht}} {{liveTop[0].EventType}} </span> 
+					<span class="etc_time" ng-show="liveTop[0].Side == '2'"> {{at}} {{liveTop[0].EventType}} </span> 
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div class="etc_right">
+		<ul class="baseball_score_list">
+			<li>
+				<div class="etc_score_team_t"></div>
+				<div class="etc_score_team_c" ng-bind="ht"></div>
+				<div class="etc_score_team_b" ng-bind="at"></div>
+			</li>
+			<li>
+				<div class="etc_score_t">점수</div>
+				<div class="etc_score_c_2">{{ liveTop[0].Score.split(':')[0] }}</div>
+				<div class="etc_score_b_2">{{ liveTop[0].Score.split(':')[1] }}</div>
+			</li>
+			<li>
+				<div></div>
+				<div></div>
+			</li>
+			<li ng-show="liveTop[0].Period>0">
+				<div class="etc_score_t">1회</div>
+				<div class="etc_score_c">{{ liveTop[0].Set1Score.split(':')[0] }}</div>
+				<div class="etc_score_b">{{ liveTop[0].Set1Score.split(':')[1] }}</div>
+			</li>
+			<li ng-show="liveTop[0].Period>1">
+				<div class="etc_score_t">2회</div>
+				<div class="etc_score_c">{{ liveTop[0].Set2Score.split(':')[0] }}</div>
+				<div class="etc_score_b">{{ liveTop[0].Set2Score.split(':')[1] }}</div>
+			</li>
+			<li ng-show="liveTop[0].Period>2">
+				<div class="etc_score_t">3회</div>
+				<div class="etc_score_c">{{ liveTop[0].Set3Score.split(':')[0] }}</div>
+				<div class="etc_score_b">{{ liveTop[0].Set3Score.split(':')[1] }}</div>
+			</li>
+			<li ng-show="liveTop[0].Period>3">
+				<div class="etc_score_t">4회</div>
+				<div class="etc_score_c">{{ liveTop[0].Set4Score.split(':')[0] }}</div>
+				<div class="etc_score_b">{{ liveTop[0].Set4Score.split(':')[1] }}</div>
+			</li>
+			<li ng-show="liveTop[0].Period>4">
+				<div class="etc_score_t">5회</div>
+				<div class="etc_score_c">{{ liveTop[0].Set5Score.split(':')[0] }}</div>
+				<div class="etc_score_b">{{ liveTop[0].Set5Score.split(':')[1] }}</div>
+			</li>			
+			<li ng-show="liveTop[0].Period>5">
+				<div class="etc_score_t">6회</div>
+				<div class="etc_score_c">{{ liveTop[0].Set6Score.split(':')[0] }}</div>
+				<div class="etc_score_b">{{ liveTop[0].Set6Score.split(':')[1] }}</div>
+			</li>
+			<li ng-show="liveTop[0].Period>6">
+				<div class="etc_score_t">7회</div>
+				<div class="etc_score_c">{{ liveTop[0].Set7Score.split(':')[0] }}</div>
+				<div class="etc_score_b">{{ liveTop[0].Set7Score.split(':')[1] }}</div>
+			</li>
+			<li ng-show="liveTop[0].Period>7">
+				<div class="etc_score_t">8회</div>
+				<div class="etc_score_c">{{ liveTop[0].Set8Score.split(':')[0] }}</div>
+				<div class="etc_score_b">{{ liveTop[0].Set8Score.split(':')[1] }}</div>
+			</li>
+			<li ng-show="liveTop[0].Period>8">
+				<div class="etc_score_t">9회</div>
+				<div class="etc_score_c">{{ liveTop[0].Set9Score.split(':')[0] }}</div>
+				<div class="etc_score_b">{{ liveTop[0].Set9Score.split(':')[1] }}</div>
+			</li>
+			<li ng-show="liveTop[0].Period>9">
+				<div class="etc_score_t">10회</div>
+				<div class="etc_score_c">{{ liveTop[0].Set10Score.split(':')[0] }}</div>
+				<div class="etc_score_b">{{ liveTop[0].Set10Score.split(':')[1] }}</div>
+			</li>
+			<li ng-show="liveTop[0].Period>10">
+				<div class="etc_score_t">11회</div>
+				<div class="etc_score_c">{{ liveTop[0].Set11Score.split(':')[0] }}</div>
+				<div class="etc_score_b">{{ liveTop[0].Set11Score.split(':')[1] }}</div>
+			</li>	
+		</ul>
+	</div>
+</div>
+	

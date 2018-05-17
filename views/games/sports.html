@@ -1,0 +1,29 @@
+<!-- sports view -->
+<div class="sports-view clearfix ">
+    <div class="main-content clearfix">
+        <!-- left -->
+        <div class="sport-menu " >
+            <div ui-view="sport-tree">
+            </div>
+        </div>
+        
+        <!-- center -->
+        <div class="sport-content" >
+            <sport-matches></sport-matches>
+            <!-- <div ui-view="sport-market">
+            </div> -->
+        </div>
+
+    </div>
+
+    <div class="sidebar" role="toolbar">
+        <betslip>
+        </betslip>
+    </div>
+</div>
+<sport-closed-modal class="ng-scope ng-isolate-scope">
+    <div class="modal fade warning-modal" id="message-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+        </div>
+    </div>
+</sport-closed-modal>

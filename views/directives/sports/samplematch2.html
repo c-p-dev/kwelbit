@@ -1,0 +1,237 @@
+<style>
+.odds-lists section {
+    margin-bottom: 10px;
+}
+</style>
+
+<section class="odds-lists livenow">
+    <div class="search-group filters ng-scope" >
+        <div class="filter-sports">
+            <div class="filter-scroller ng-scope"  style="width: 295px;">
+                <button class="filter filter-sport animated flipInX ng-scope">
+                    <a data-toggle="tooltip" data-placement="top" title="" class="ng-scope football" data-original-title="Football">
+                        <!-- <span class="ng-binding">Football</span> -->
+                         <img src="./images/ibet/sport_s/5.png">
+                    </a>
+                </button>
+                <button class="filter filter-sport animated flipInX ng-scope">
+                    <a data-toggle="tooltip" data-placement="top" title="" class="ng-scope tennis" data-original-title="Tennis">
+
+                        <img src="./images/ibet/sport_s/1.png">
+                    </a>
+                </button>
+                <button class="filter filter-sport animated flipInX ng-scope">
+                    <a data-toggle="tooltip" data-placement="top" title="" class="ng-scope basketball" data-original-title="Basketball">
+                        <!-- <span class="ng-binding">Basketball</span> -->
+                        <img src="./images/ibet/sport_s/11.png">
+                    </a>
+                </button>
+                <button class="filter filter-sport animated flipInX ng-scope">
+                    <a data-toggle="tooltip" data-placement="top" title="" class="ng-scope esport" data-original-title="eSports">
+                        <!-- <span class="ng-binding">eSports</span> -->
+                        <img src="./images/ibet/sport_s/2.png">
+                    </a>
+                </button>
+                <button class="filter filter-sport animated flipInX ng-scope">
+                    <a data-toggle="tooltip" data-placement="top" title="" class="ng-scope rugby-league" data-original-title="Rugby League">
+                        <!-- <span class="ng-binding">Rugby League</span> -->
+                        <img src="./images/ibet/sport_s/3.png">
+                    </a>
+                </button>
+                <button class="filter filter-sport animated flipInX ng-scope">
+                    <a data-toggle="tooltip" data-placement="top" title="" class="ng-scope rugby-union" data-original-title="Rugby Union">
+                        <!-- <span class="ng-binding">Rugby Union</span> -->
+                        <img src="./images/ibet/sport_s/4.png">
+                    </a>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="search-group category flex-box bottom10">
+        <div class="search-group-item">
+            <!-- search -->
+            <sport-search categories="searchResults" odds="oddsResults" class="-full ng-isolate-scope">
+                <div class="search search-sport" ng-class="open">
+                    <div class="search-container">
+                        <div class="search-module">
+                            <div class="search-input">
+                                <div class="form-group">
+                                    <input class="form-control ng-pristine ng-untouched ng-valid ng-scope ng-empty" value="" data-toggle="tooltip" placeholder="Search..." data-original-title="" title="">
+                                    <i class=" fa fa-search ng-scope"></i>
+                                    <div class="loader ng-hide" ng-show="vm.updatePending">
+                                        <svg class="circular" viewBox="25 25 50 50">
+                                            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="4" stroke-miterlimit="10"></circle>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </sport-search>
+        </div>
+        <!-- search group -->
+        <div class="search-group-item">
+            <button class="leaderboard-btn">
+                <span class="ng-binding">Winners</span>
+                <img ng-class="winners-ico-active" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD0AAAAvAQMAAABqslA6AAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAA5JREFUeNpjYBgFQwAAAAGnAAEAya95AAAAAElFTkSuQmCC" class="winners-ico">
+            </button>
+            <button class="bets-feed-btn" ng-class="active">
+                <span class="pulse-button"></span>
+                <span class="ng-binding">Incoming bets </span>
+                <img ng-class="betsfeed-ico" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuAQMAAABtd7l0AAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAA1JREFUeNpjYBgFlAEAAUIAAT/cqQ0AAAAASUVORK5CYII=" class="betsfeed-ico">
+            </button>
+        </div>
+    </div>
+    <!-- games -->
+    <section>
+        <header>
+            <h1 class="full-width ng-binding"> <i><img src="./images/ibet/sport_s/11.png"></i> 야구 </h1>
+        </header>
+        <div class="ng-scope">
+            <sport-match ng-repeat="(index, item) in matches" class="ng-isolate-scope">
+                <article class="match mixed" ng-class="more-odds">
+                    <span class="close-button"></span>
+                    <div class="match-time ng-binding">
+                        <i class="fa fa-star-o"></i> Wed 18:00
+                    </div>
+                    <section>
+                        <header>
+                            <div class="match-info">
+                                <div class="match-name ng-scope">
+                                    <h2>
+                                <span class="ng-binding">{{item.team1}}</span>
+                                <span class="devider">-</span>
+                                <span class="ng-binding">{{item.team2}}</span>
+                                </h2>
+                                    <h3 class="ng-binding">
+                                <span class="sport-name ng-binding">{{item.gametype}}</span>
+                                / {{item.location}}
+                                </h3>
+                                </div>
+                            </div>
+                        </header>
+                        <div class="match-odds">
+                            <div class="match-odds-wrap">
+                                <div sly-repeat="topMarketType in vm.topMarketTypes" class="market-type ng-scope">
+                                    <div class="promoted-market">
+                                        <!-- <div class="market-header ng-binding">
+                                        Match Result
+                                    </div> -->
+                                        <div class="market-outcome">
+                                            <div class="odds-item ng-binding ng-scope" ng-repeat="result_key in topMarketType.result_keys">
+                                                1
+                                            </div>
+                                            <div class="odds-item ng-binding ng-scope" ng-repeat="result_key in topMarketType.result_keys">
+                                                2
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <sport-matchlist-promoted-markets class="ng-isolate-scope">
+                                        <div viewport-watch="" style="position:relative" class="cell-2">
+                                            <div class="odds-item" ng-click="setOddActive(index,1.35)" ng-class="item.odds.num == 1.35 ? 'active' : '' ">
+                                                1.35
+                                                <!-- animation here -->
+                                                <span ng-if="item.odds.num==1.35" class="value ng-binding ng-scope tinRightOut" ng-class="item.odds.num == 1.35 ? 'tinRightOut' : ''">1.35</span>
+                                            </div>
+                                            <div class="odds-item " ng-click="setOddActive(index,3.45)" ng-class="item.odds.num == 3.45 ? 'active' : '' ">
+                                                3.45
+                                                <!-- animation here -->
+                                                <span ng-if="item.odds.num==3.45" class="value ng-binding ng-scope tinRightOut" ng-class="item.odds.num == 1.35 ? 'tinRightOut' : ''">3.45</span>
+                                            </div>
+                                            <div class="odds-item " ng-click="setOddActive(index,3.45)" ng-class="item.odds.num == 3.45 ? 'active' : '' ">
+                                                3.45
+                                                <!-- animation here -->
+                                                <span ng-if="item.odds.num==3.45" class="value ng-binding ng-scope tinRightOut" ng-class="item.odds.num == 1.35 ? 'tinRightOut' : ''">3.45</span>
+                                            </div>
+                                            <div class="special-icons" style="margin-top: -30px">
+                                                <i class="freebet-ico freebet-ico-2">free bet</i>
+                                            </div>
+                                        </div>
+                                    </sport-matchlist-promoted-markets>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </article>
+            </sport-match>
+            <!-- test -->
+        </div>
+    </section>
+    <section>
+        <header>
+            <h1 class="full-width ng-binding"> <i><img src="./images/ibet/sport_s/1.png"></i> 축구 </h1>
+        </header>
+        <div class="ng-scope">
+            <sport-match ng-repeat="(index, item) in matches" class="ng-isolate-scope">
+                <article class="match mixed" ng-class="more-odds">
+                    <span class="close-button"></span>
+                    <div class="match-time ng-binding">
+                        Wed
+                        <br> 18:00
+                        <span class="livebet ng-binding ng-scope">Livebet</span>
+                    </div>
+                    <section>
+                        <header>
+                            <div class="match-info">
+                                <div class="match-name ng-scope">
+                                    <h2>
+                                <span class="ng-binding">{{item.team1}}</span>
+                                <span class="devider">-</span>
+                                <span class="ng-binding">{{item.team2}}</span>
+                                </h2>
+                                    <h3 class="ng-binding">
+                                <span class="sport-name ng-binding">{{item.gametype}}</span>
+                                / {{item.location}}
+                                </h3>
+                                </div>
+                            </div>
+                        </header>
+                        <div class="match-odds">
+                            <div class="match-odds-wrap">
+                                <div sly-repeat="topMarketType in vm.topMarketTypes" class="market-type ng-scope">
+                                    <div class="promoted-market">
+                                        <div class="market-header ng-binding">
+                                            Match Result
+                                        </div>
+                                        <div class="market-outcome">
+                                            <div class="odds-item ng-binding ng-scope" ng-repeat="result_key in topMarketType.result_keys">
+                                                1
+                                            </div>
+                                            <div class="odds-item ng-binding ng-scope" ng-repeat="result_key in topMarketType.result_keys">
+                                                2
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <sport-matchlist-promoted-markets class="ng-isolate-scope">
+                                        <div viewport-watch="" style="position:relative" class="cell-2">
+                                            <div class="odds-item" ng-click="setOddActive(index,1.35)" ng-class="item.odds.num == 1.35 ? 'active' : '' ">
+                                                1.35
+                                                <!-- animation here -->
+                                                <span ng-if="item.odds.num==1.35" class="value ng-binding ng-scope tinRightOut" ng-class="item.odds.num == 1.35 ? 'tinRightOut' : ''">1.35</span>
+                                            </div>
+                                            <div class="odds-item " ng-click="setOddActive(index,3.45)" ng-class="item.odds.num == 3.45 ? 'active' : '' ">
+                                                3.45
+                                                <!-- animation here -->
+                                                <span ng-if="item.odds.num==3.45" class="value ng-binding ng-scope tinRightOut" ng-class="item.odds.num == 1.35 ? 'tinRightOut' : ''">3.45</span>
+                                            </div>
+                                            <div class="odds-item " ng-click="setOddActive(index,3.45)" ng-class="item.odds.num == 3.45 ? 'active' : '' ">
+                                                3.45
+                                                <!-- animation here -->
+                                                <span ng-if="item.odds.num==3.45" class="value ng-binding ng-scope tinRightOut" ng-class="item.odds.num == 1.35 ? 'tinRightOut' : ''">3.45</span>
+                                            </div>
+                                            <div class="special-icons" style="margin-top: -30px">
+                                                <i class="freebet-ico freebet-ico-2">free bet</i>
+                                            </div>
+                                        </div>
+                                    </sport-matchlist-promoted-markets>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </article>
+            </sport-match>
+            <!-- test -->
+        </div>
+    </section>
+</section>
